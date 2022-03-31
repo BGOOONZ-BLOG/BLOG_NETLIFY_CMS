@@ -1,7 +1,7 @@
 {
     "palette": "navy",
     "header": {
-        "logo_img": "images/home-button.png",
+        "logo_img": "images/DgqLkQjTmk.png",
         "logo_img_alt": "webdevhub logo",
         "has_nav": true,
         "nav_links": [
@@ -46,7 +46,7 @@
                         "url": "/docs/python/python-ds",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -72,7 +72,7 @@
                         "url": "https://bgoonz.blogspot.com/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -81,11 +81,28 @@
                         "url": "https://blog-w-comments.vercel.app/",
                         "style": "primary",
                         "icon_class": "dev",
+                        "new_window": false,
+                        "no_follow": false,
+                        "type": "action"
+                    },
+                    {
+                        "label": "platform docs",
+                        "url": "blog/platform-docs/",
+                        "style": "primary",
+                        "icon_class": "dev",
                         "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
-
+                    {
+                        "label": "nodejs",
+                        "url": "docs/articles/nodejs/",
+                        "style": "primary",
+                        "icon_class": "dev",
+                        "new_window": true,
+                        "no_follow": false,
+                        "type": "action"
+                    },
                     {
                         "label": "Blog w Comments",
                         "url": "/blogWcomments/",
@@ -116,15 +133,7 @@
                         "no_follow": false
                     },
                     {
-                        "label": "Do's and Don'ts of interviews",
-                        "url": "interview/dos-and-donts",
-                        "style": "primary",
-                        "icon_class": "dev",
-                        "new_window": false,
-                        "no_follow": false
-                    },
-                    {
-                        "label": "Career-Tips",
+                        "label": "Interviewing-Tips",
                         "url": "https://bgoonz-blog.netlify.app/docs/career/",
                         "style": "primary",
                         "icon_class": "dev",
@@ -133,7 +142,7 @@
                     },
                     {
                         "label": "Interview Questions",
-                        "url": "docs/interview/interview-questions",
+                        "url": "#",
                         "style": "primary",
                         "icon_class": "dev",
                         "new_window": false,
@@ -143,10 +152,9 @@
             },
             {
                 "label": "Archive",
-                "url": "/docs/archive",
                 "style": "primary",
                 "icon_class": "github",
-                "type": "action_menu",
+                "new_window": true,
                 "no_follow": false,
                 "has_subnav": true,
                 "subnav_links": [
@@ -155,7 +163,7 @@
                         "url": "https://github.com/bgoonz/Learning-Assets",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -173,7 +181,7 @@
                         "url": "https://web-dev-resource-hub.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -200,19 +208,19 @@
                         "url": "https://bryan-guner.gitbook.io/my-docs/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false
                     }
                 ],
-
-                "new_window": false
+                "type": "action_menu",
+                "url": "docs/tools/Archive"
             },
             {
                 "label": "Projects",
                 "url": "docs/projects",
                 "style": "primary",
                 "icon_class": "dev",
-                "new_window": false,
+                "new_window": true,
                 "no_follow": false,
                 "has_subnav": true,
                 "subnav_links": [
@@ -221,7 +229,7 @@
                         "url": "https://potluck-landing.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -230,25 +238,25 @@
                         "url": "https://meditate42app.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
                     {
                         "label": "WebAudioLab",
-                        "url": "https://bgoonz.github.io/WebAudioDaw/",
+                        "url": "https://panoramic-eggplant-452e4.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
                     {
                         "label": "SearchAwesome",
-                        "url": "https://search-awesome.vercel.app/",
+                        "url": "https://bgoonz.github.io/searchAwesome/",
                         "style": "primary",
                         "icon_class": "github",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -257,7 +265,7 @@
                         "url": "https://bg-portfolio.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false
                     },
                     {
@@ -265,7 +273,7 @@
                         "url": "https://a.familypromiseservicetracker.dev/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false
                     },
                     {
@@ -308,7 +316,7 @@
                         "url": "https://bgoonz-blog-v3-0.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -335,7 +343,7 @@
                         "url": "https://web-dev-hub.com/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -370,7 +378,7 @@
                         "url": "https://githtmlpreview.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -379,7 +387,7 @@
                         "url": "https://devtools42.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -388,7 +396,7 @@
                         "url": "https://ternary42.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -397,7 +405,7 @@
                         "url": "https://determined-dijkstra-ee7390.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -406,7 +414,7 @@
                         "url": "https://github.com/bgoonz/web-dev-setup-checker",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -415,7 +423,7 @@
                         "url": "https://potluck-landing.netlify.app/",
                         "style": "primary",
                         "icon_class": "dev",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     },
@@ -431,9 +439,9 @@
                     {
                         "label": "Github-Advanced-Search",
                         "url": "https://github.com/search/advanced",
-                        "style": "primary",
+                        "style": "icon",
                         "icon_class": "github",
-                        "new_window": false,
+                        "new_window": true,
                         "no_follow": false,
                         "type": "action"
                     }
@@ -471,7 +479,7 @@
                 "url": "https://www.youtube.com/channel/UC9-rYyUMsnEBK8G8fCyrXXA",
                 "style": "icon",
                 "icon_class": "youtube",
-                "new_window": false,
+                "new_window": true,
                 "no_follow": false,
                 "type": "action"
             },
@@ -480,7 +488,7 @@
                 "url": "https://www.instagram.com/bgoonz/?hl=en",
                 "style": "icon",
                 "icon_class": "instagram",
-                "new_window": false,
+                "new_window": true,
                 "no_follow": false,
                 "type": "action"
             },
@@ -489,7 +497,7 @@
                 "url": "https://dev.to/bgoonz",
                 "style": "icon",
                 "icon_class": "dev",
-                "new_window": false,
+                "new_window": true,
                 "no_follow": false,
                 "type": "action"
             }
@@ -500,7 +508,7 @@
                 "url": "https://random-static-html-deploys.netlify.app/blm.html",
                 "style": "primary",
                 "icon_class": "dev",
-                "new_window": false,
+                "new_window": true,
                 "no_follow": false,
                 "type": "action"
             }
@@ -509,5 +517,5 @@
     },
     "title": "webdevhub",
     "domain": "https://bgoonz-blog.netlify.app/",
-    "favicon": "images/logo-final-touchup.PNG"
+    "favicon": "images/enhanced (1).png"
 }

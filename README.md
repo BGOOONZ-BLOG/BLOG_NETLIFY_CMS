@@ -2,14 +2,14 @@
 
 # [⇨WEBSITE🗺️⇦](https://bgoonz-blog.netlify.app/)
   
-
+https://blogcmsbgoonz.netlify.app/
 ### [Github Org Link](https://github.com/BGOOONZ-BLOG/)
 
 </div>
 
 ---
 
-
+### https://app.stackbit.com/studio/62458daac8991600bdbe80cb/
 
 
 

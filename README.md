@@ -1,131 +1,527 @@
-<div align="center">
 
-# [⇨WEBSITE🗺️⇦](https://bgoonz-blog.netlify.app/)
-  
-https://blogcmsbgoonz.netlify.app/
-### [Github Org Link](https://github.com/BGOOONZ-BLOG/)
+# [⇨WEBSITE🗺️⇦](https://blogcmsbgoonz.netlify.app/)
+
+<details>
+
+<summary> Table Of Contents </summary>
+
+- [⇨WEBSITE🗺️⇦](#website️)
+      - [Github Org Link](#github-org-link)
+          - [Cloudfare-Backup ⇨ [search](https://www.algolia.com/realtime-search-demo/web-dev-resource-hub-9e6b8aa8-6106-44c5-9f59-ff3f9531abd4) ⇨ [Backup Repo Deploy](https://bgoonzblog20-backup.netlify.app/#gsc.tab=0) ⇨ [Github pages](https://bgoonz.github.io/BGOONZ_BLOG_2.0/) ⇨ [Go To Site Wiki](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki) ⇨ [Gatsby Cloud Version](https://bgoonzblog20master.gatsbyjs.io/)](#cloudfare-backup--search--backup-repo-deploy--github-pages--go-to-site-wiki--gatsby-cloud-version)
+    - [My Commands](#my-commands)
+    - [## Find](#-find)
+  - [To find files by case-insensitive extension (ex: .jpg, .jpg, .jpG)](#to-find-files-by-case-insensitive-extension-ex-jpg-jpg-jpg)
+  - [To find directories](#to-find-directories)
+  - [To find files](#to-find-files)
+  - [To find files by octal permission](#to-find-files-by-octal-permission)
+  - [To find files with setuid bit set](#to-find-files-with-setuid-bit-set)
+  - [To find files with extension '.txt' and remove them](#to-find-files-with-extension-txt-and-remove-them)
+  - [To find files with extension '.txt' and look for a string into them](#to-find-files-with-extension-txt-and-look-for-a-string-into-them)
+  - [To find files with size bigger than 5 Mebibyte and sort them by size](#to-find-files-with-size-bigger-than-5-mebibyte-and-sort-them-by-size)
+  - [To find files bigger than 2 Megabyte and list them](#to-find-files-bigger-than-2-megabyte-and-list-them)
+  - [To find files modified more than 7 days ago and list file information](#to-find-files-modified-more-than-7-days-ago-and-list-file-information)
+  - [To find symlinks owned by a user and list file information](#to-find-symlinks-owned-by-a-user-and-list-file-information)
+  - [To search for and delete empty directories](#to-search-for-and-delete-empty-directories)
+  - [To search for directories named build at a max depth of 2 directories](#to-search-for-directories-named-build-at-a-max-depth-of-2-directories)
+  - [To search all files who are not in .git directory](#to-search-all-files-who-are-not-in-git-directory)
+  - [To find all files that have the same node (hard link) as MY_FILE_HERE](#to-find-all-files-that-have-the-same-node-hard-link-as-my_file_here)
+  - [To find all files in the current directory and modify their permissions](#to-find-all-files-in-the-current-directory-and-modify-their-permissions)
+  - [1. Remove spaces from file and folder names and then remove numbers from files and folder names](#1-remove-spaces-from-file-and-folder-names-and-then-remove-numbers-from-files-and-folder-names)
+    - [Description: need to : `sudo apt install rename`](#description-need-to--sudo-apt-install-rename)
+    - [## code](#-code)
+  - [3. Clean Out Messy Git Repo](#3-clean-out-messy-git-repo)
+    - [Description: recursively removes git related folders as well as internal use files / attributions in addition to empty folders](#description-recursively-removes-git-related-folders-as-well-as-internal-use-files--attributions-in-addition-to-empty-folders)
+    - [### code](#-code-1)
+  - [4. clone all of a user's git repositories](#4-clone-all-of-a-users-git-repositories)
+    - [Description: clone all of a user or organization's git repositories](#description-clone-all-of-a-user-or-organizations-git-repositories)
+    - [### code](#-code-2)
+  - [Generalized](#generalized)
+  - [Clone all Git User](#clone-all-git-user)
+  - [Clone all Git Organization](#clone-all-git-organization)
+  - [5. Git Workflow](#5-git-workflow)
+    - [Description](#description)
+    - [### code](#-code-3)
+  - [6. Recursive Unzip In Place](#6-recursive-unzip-in-place)
+    - [Description: recursively unzips folders and then deletes the zip file by the same name](#description-recursively-unzips-folders-and-then-deletes-the-zip-file-by-the-same-name)
+    - [### code](#-code-4)
+  - [7. git pull keeping local changes](#7-git-pull-keeping-local-changes)
+    - [Description](#description-1)
+    - [### code](#-code-5)
+  - [8. Prettier Code Formatter](#8-prettier-code-formatter)
+    - [Description](#description-2)
+    - [### code](#-code-6)
+  - [9. Pandoc](#9-pandoc)
+    - [Description](#description-3)
+    - [### code](#-code-7)
+  - [10. Gitpod Installs](#10-gitpod-installs)
+    - [Description](#description-4)
+    - [### code](#-code-8)
+  - [11. Repo Utils Package](#11-repo-utils-package)
+    - [Description: my standard repo utis package](#description-my-standard-repo-utis-package)
+    - [### code](#-code-9)
+  - [12. Unix Tree Package Usage](#12-unix-tree-package-usage)
+    - [Description](#description-5)
+    - [### code](#-code-10)
+  - [13. Find & Replace string in file & folder names recursively](#13-find--replace-string-in-file--folder-names-recursively)
+    - [Description](#description-6)
+    - [### code](#-code-11)
+  - [14. Remove double extensions](#14-remove-double-extensions)
+    - [Description](#description-7)
+    - [### code](#-code-12)
+  - [15. Truncate folder names down to 12 characters](#15-truncate-folder-names-down-to-12-characters)
+    - [Description](#description-8)
+    - [### code](#-code-13)
+  - [16.Appendir.js](#16appendirjs)
+    - [Description: combine the contents of every file in the contaning directory](#description-combine-the-contents-of-every-file-in-the-contaning-directory)
+    - [### code](#-code-14)
+  - [17. Replace space in filename with underscore](#17-replace-space-in-filename-with-underscore)
+    - [Description: followed by replace `'#' with '_'` in directory name](#description-followed-by-replace--with-_-in-directory-name)
+    - [### code](#-code-15)
+  - [18. Filter & delete files by name and extension](#18-filter--delete-files-by-name-and-extension)
+    - [Description](#description-9)
+    - [### code](#-code-16)
+  - [19. Remove lines containing string](#19-remove-lines-containing-string)
+    - [Description](#description-10)
+    - [### code](#-code-17)
+  - [20. Remove duplicate lines from a text file](#20-remove-duplicate-lines-from-a-text-file)
+    - [Description](#description-11)
+    - [### code](#-code-18)
+  - [21. Remove lines containing string](#21-remove-lines-containing-string)
+    - [Description](#description-12)
+    - [### code](#-code-19)
+  - [22. Zip directory excluding .git and node_modules all the way down (Linux)](#22-zip-directory-excluding-git-and-node_modules-all-the-way-down-linux)
+    - [Description](#description-13)
+    - [### code](#-code-20)
+  - [23. Delete files containing a certain string](#23-delete-files-containing-a-certain-string)
+    - [Description](#description-14)
+    - [### code](#-code-21)
+  - [24](#24)
+    - [Description](#description-15)
+    - [### code](#-code-22)
+  - [25. Index of Iframes](#25-index-of-iframes)
+    - [Description: Creates an index.html file that contains all the files in the working directory or any of it's sub folders as iframes instead of anchor tags](#description-creates-an-indexhtml-file-that-contains-all-the-files-in-the-working-directory-or-any-of-its-sub-folders-as-iframes-instead-of-anchor-tags)
+    - [### code](#-code-23)
+  - [26. Filter Corrupted Git Repo For Troublesome File](#26-filter-corrupted-git-repo-for-troublesome-file)
+    - [Description](#description-16)
+    - [### code](#-code-24)
+  - [27. OVERWRITE LOCAL CHANGES](#27-overwrite-local-changes)
+    - [Description](#description-17)
+    - [### code](#-code-25)
+  - [28. Remove Submodules](#28-remove-submodules)
+    - [Description: To remove a submodule you need to](#description-to-remove-a-submodule-you-need-to)
+    - [### code](#-code-26)
+  - [29. GET GISTS](#29-get-gists)
+    - [Description](#description-18)
+    - [### code](#-code-27)
+  - [30. Remove Remote OriginL](#30-remove-remote-originl)
+    - [Description](#description-19)
+    - [### code](#-code-28)
+  - [31. just clone .git folder](#31-just-clone-git-folder)
+    - [Description](#description-20)
+    - [### code](#-code-29)
+  - [32. Undo recent pull request](#32-undo-recent-pull-request)
+    - [Description](#description-21)
+    - [### code](#-code-30)
+  - [33. Lebab](#33-lebab)
+    - [Description: ES5 --> ES6](#description-es5----es6)
+    - [### code](#-code-31)
+  - [34. Troubleshoot Ubuntu Input/Output Error](#34-troubleshoot-ubuntu-inputoutput-error)
+    - [Description: Open Powershell as Administrator](#description-open-powershell-as-administrator)
+    - [### code](#-code-32)
+  - [35. Export Medium as Markdown](#35-export-medium-as-markdown)
+    - [Description](#description-22)
+    - [### code](#-code-33)
+  - [36. Delete files in violation of a given size range (100MB for git)](#36-delete-files-in-violation-of-a-given-size-range-100mb-for-git)
+    - [Description](#description-23)
+    - [### code](#-code-34)
+  - [37. download all links of given file type](#37-download-all-links-of-given-file-type)
+    - [Description](#description-24)
+    - [### code](#-code-35)
+  - [38. Kill all node processes](#38-kill-all-node-processes)
+    - [Description](#description-25)
+    - [### code](#-code-36)
+  - [39. Remove string from file names recursively](#39-remove-string-from-file-names-recursively)
+    - [Description: In the example below I am using this command to remove the string "-master" from all file names in the working directory and all of it's sub directories](#description-in-the-example-below-i-am-using-this-command-to-remove-the-string--master-from-all-file-names-in-the-working-directory-and-all-of-its-sub-directories)
+    - [### code](#-code-37)
+  - [40. Remove spaces from file and folder names recursively](#40-remove-spaces-from-file-and-folder-names-recursively)
+    - [Description: replaces spaces in file and folder names with an `_` underscore](#description-replaces-spaces-in-file-and-folder-names-with-an-_-underscore)
+    - [### code](#-code-38)
+  - [41. Zip Each subdirectories in a given directory into their own zip file](#41-zip-each-subdirectories-in-a-given-directory-into-their-own-zip-file)
+    - [Description](#description-26)
+    - [### code](#-code-39)
+  - [90](#90)
+  - [91. Unzip PowerShell](#91-unzip-powershell)
+    - [Description](#description-27)
+    - [### code](#-code-40)
+  - [92. return to bash from zsh](#92-return-to-bash-from-zsh)
+    - [Description](#description-28)
+    - [### code](#-code-41)
+  - [93. Symbolic Link](#93-symbolic-link)
+    - [Description: to working directory](#description-to-working-directory)
+    - [### code](#-code-42)
+  - [94. auto generate readme](#94-auto-generate-readme)
+    - [Description: rename existing readme to blueprint.md](#description-rename-existing-readme-to-blueprintmd)
+    - [### code](#-code-43)
+  - [95. Log into postgres](#95-log-into-postgres)
+    - [Description](#description-29)
+    - [### code](#-code-44)
+    - [Technologies Used](#technologies-used)
+  - [96. URL To Subscribe To YouTube Channel](#96-url-to-subscribe-to-youtube-channel)
+    - [Description](#description-30)
+    - [### code](#-code-45)
+  - [97. Embed Repl.it In Medium Post](#97-embed-replit-in-medium-post)
+    - [### code](#-code-46)
+  - [98](#98)
+    - [Description](#description-31)
+    - [### code](#-code-47)
+    - [Wiki Nav](#wiki-nav)
+    - [Dependencies](#dependencies)
+    - [Docs Structure](#docs-structure)
+  - [SITEMAP](#sitemap)
+  - [**🌍⇒https://blogcmsbgoonz.netlify.app/🗺️**](#httpsblogcmsbgoonznetlifyapp️)
+    - [**🌍⇒blog🗺️**](#blog️)
+    - [**🌍⇒docs🗺️**](#docs️)
+    - [**🌍⇒readme🗺️**](#readme️)
+    - [**🌍⇒review🗺️**](#review️)
+    - [**🌍⇒showcase🗺️**](#showcase️)
+    - [**🌍⇒blog/awesome-graphql🗺️**](#blogawesome-graphql️)
+    - [**🌍⇒blog/big-o-complexity🗺️**](#blogbig-o-complexity️)
+    - [**🌍⇒blog/blog-archive🗺️**](#blogblog-archive️)
+    - [**🌍⇒blog/blogwcomments🗺️**](#blogblogwcomments️)
+    - [**🌍⇒blog/data-structures🗺️**](#blogdata-structures️)
+    - [**🌍⇒blog/flow-control-in-python🗺️**](#blogflow-control-in-python️)
+    - [**🌍⇒blog/functions-in-python🗺️**](#blogfunctions-in-python️)
+    - [**🌍⇒blog/git-gateway🗺️**](#bloggit-gateway️)
+    - [**🌍⇒blog/interview-questions-js🗺️**](#bloginterview-questions-js️)
+    - [**🌍⇒blog/media-queries-explained🗺️**](#blogmedia-queries-explained️)
+    - [**🌍⇒blog/my-medium🗺️**](#blogmy-medium️)
+    - [**🌍⇒blog/netlify-cms🗺️**](#blognetlify-cms️)
+    - [**🌍⇒blog/platform-docs🗺️**](#blogplatform-docs️)
+    - [**🌍⇒blog/python-for-js-dev🗺️**](#blogpython-for-js-dev️)
+    - [**🌍⇒blog/python-resources🗺️**](#blogpython-resources️)
+    - [**🌍⇒blog/web-dev-trends🗺️**](#blogweb-dev-trends️)
+    - [**🌍⇒blog/web-scraping🗺️**](#blogweb-scraping️)
+    - [**🌍⇒docs/about🗺️**](#docsabout️)
+    - [**🌍⇒docs/articles🗺️**](#docsarticles️)
+    - [**🌍⇒docs/audio🗺️**](#docsaudio️)
+    - [**🌍⇒docs/career🗺️**](#docscareer️)
+    - [**🌍⇒docs/community🗺️**](#docscommunity️)
+    - [**🌍⇒docs/content🗺️**](#docscontent️)
+    - [**🌍⇒docs/docs🗺️**](#docsdocs️)
+    - [**🌍⇒docs/faq🗺️**](#docsfaq️)
+    - [**🌍⇒docs/gallery🗺️**](#docsgallery️)
+    - [**🌍⇒docs/interact🗺️**](#docsinteract️)
+    - [**🌍⇒docs/javascript🗺️**](#docsjavascript️)
+    - [**🌍⇒docs/leetcode🗺️**](#docsleetcode️)
+    - [**🌍⇒docs/other-content🗺️**](#docsother-content️)
+    - [**🌍⇒docs/privacy-policy🗺️**](#docsprivacy-policy️)
+    - [**🌍⇒docs/projects🗺️**](#docsprojects️)
+    - [**🌍⇒docs/python🗺️**](#docspython️)
+    - [**🌍⇒docs/quick-reference🗺️**](#docsquick-reference️)
+    - [**🌍⇒docs/react🗺️**](#docsreact️)
+    - [**🌍⇒docs/reference🗺️**](#docsreference️)
+    - [**🌍⇒docs/search🗺️**](#docssearch️)
+    - [**🌍⇒docs/sitemap🗺️**](#docssitemap️)
+    - [**🌍⇒docs/tools🗺️**](#docstools️)
+    - [**🌍⇒docs/tutorials🗺️**](#docstutorials️)
+    - [**🌍⇒docs/about/eng-portfolio🗺️**](#docsabouteng-portfolio️)
+    - [**🌍⇒docs/about/ideas-for-this-website🗺️**](#docsaboutideas-for-this-website️)
+    - [**🌍⇒docs/about/intrests🗺️**](#docsaboutintrests️)
+    - [**🌍⇒docs/about/interview🗺️**](#docsaboutinterview️)
+    - [**🌍⇒docs/about/resume🗺️**](#docsaboutresume️)
+    - [**🌍⇒docs/articles/basic-web-dev🗺️**](#docsarticlesbasic-web-dev️)
+    - [**🌍⇒docs/articles/buffers🗺️**](#docsarticlesbuffers️)
+    - [**🌍⇒docs/articles/dev-dep🗺️**](#docsarticlesdev-dep️)
+    - [**🌍⇒docs/articles/event-loop🗺️**](#docsarticlesevent-loop️)
+    - [**🌍⇒docs/articles/fs-module🗺️**](#docsarticlesfs-module️)
+    - [**🌍⇒docs/articles/how-the-web-works🗺️**](#docsarticleshow-the-web-works️)
+    - [**🌍⇒docs/articles/http🗺️**](#docsarticleshttp️)
+    - [**🌍⇒docs/articles/install🗺️**](#docsarticlesinstall️)
+    - [**🌍⇒docs/articles/intro🗺️**](#docsarticlesintro️)
+    - [**🌍⇒docs/articles/media-queries-no-more🗺️**](#docsarticlesmedia-queries-no-more️)
+    - [**🌍⇒docs/articles/module-exports🗺️**](#docsarticlesmodule-exports️)
+    - [**🌍⇒docs/articles/nextjs🗺️**](#docsarticlesnextjs️)
+    - [**🌍⇒docs/articles/node-api-express🗺️**](#docsarticlesnode-api-express️)
+    - [**🌍⇒docs/articles/node-cli-args🗺️**](#docsarticlesnode-cli-args️)
+    - [**🌍⇒docs/articles/node-common-modules🗺️**](#docsarticlesnode-common-modules️)
+    - [**🌍⇒docs/articles/node-env-variables🗺️**](#docsarticlesnode-env-variables️)
+    - [**🌍⇒docs/articles/node-js-language🗺️**](#docsarticlesnode-js-language️)
+    - [**🌍⇒docs/articles/node-package-manager🗺️**](#docsarticlesnode-package-manager️)
+    - [**🌍⇒docs/articles/node-repl🗺️**](#docsarticlesnode-repl️)
+    - [**🌍⇒docs/articles/node-run-cli🗺️**](#docsarticlesnode-run-cli️)
+    - [**🌍⇒docs/articles/nodejs🗺️**](#docsarticlesnodejs️)
+    - [**🌍⇒docs/articles/nodevsbrowser🗺️**](#docsarticlesnodevsbrowser️)
+    - [**🌍⇒docs/articles/npm🗺️**](#docsarticlesnpm️)
+    - [**🌍⇒docs/articles/npx🗺️**](#docsarticlesnpx️)
+    - [**🌍⇒docs/articles/os-module🗺️**](#docsarticlesos-module️)
+    - [**🌍⇒docs/articles/package-lock🗺️**](#docsarticlespackage-lock️)
+    - [**🌍⇒docs/articles/reading-files🗺️**](#docsarticlesreading-files️)
+    - [**🌍⇒docs/articles/semantic🗺️**](#docsarticlessemantic️)
+    - [**🌍⇒docs/articles/semantic-html🗺️**](#docsarticlessemantic-html️)
+    - [**🌍⇒docs/articles/the-uniform-resource-locator-(url)🗺️**>)](#docsarticlesthe-uniform-resource-locator-url️)
+    - [**🌍⇒docs/articles/understanding-firebase🗺️**](#docsarticlesunderstanding-firebase️)
+    - [**🌍⇒docs/articles/v8🗺️**](#docsarticlesv8️)
+    - [**🌍⇒docs/articles/web-standards-checklist🗺️**](#docsarticlesweb-standards-checklist️)
+    - [**🌍⇒docs/articles/webdev-tools🗺️**](#docsarticleswebdev-tools️)
+    - [**🌍⇒docs/articles/write-2-json-with-python🗺️**](#docsarticleswrite-2-json-with-python️)
+    - [**🌍⇒docs/articles/writing-files🗺️**](#docsarticleswriting-files️)
+    - [**🌍⇒docs/audio/audio🗺️**](#docsaudioaudio️)
+    - [**🌍⇒docs/audio/audio-feature-extraction🗺️**](#docsaudioaudio-feature-extraction️)
+    - [**🌍⇒docs/audio/dfft🗺️**](#docsaudiodfft️)
+    - [**🌍⇒docs/audio/discrete-fft🗺️**](#docsaudiodiscrete-fft️)
+    - [**🌍⇒docs/audio/dtw-python-explained🗺️**](#docsaudiodtw-python-explained️)
+    - [**🌍⇒docs/audio/dynamic-time-warping🗺️**](#docsaudiodynamic-time-warping️)
+    - [**🌍⇒docs/audio/web-audio-api🗺️**](#docsaudioweb-audio-api️)
+    - [**🌍⇒docs/career/confidence🗺️**](#docscareerconfidence️)
+    - [**🌍⇒docs/career/dev-interview🗺️**](#docscareerdev-interview️)
+    - [**🌍⇒docs/career/interview-dos-n-donts🗺️**](#docscareerinterview-dos-n-donts️)
+    - [**🌍⇒docs/career/job-boards🗺️**](#docscareerjob-boards️)
+    - [**🌍⇒docs/community/an-open-letter-2-future-developers🗺️**](#docscommunityan-open-letter-2-future-developers️)
+    - [**🌍⇒docs/community/video-chat🗺️**](#docscommunityvideo-chat️)
+    - [**🌍⇒docs/content/algo🗺️**](#docscontentalgo️)
+    - [**🌍⇒docs/content/archive🗺️**](#docscontentarchive️)
+    - [**🌍⇒docs/content/data-structures-algo🗺️**](#docscontentdata-structures-algo️)
+    - [**🌍⇒docs/content/gatsby-Queries-Mutations🗺️**](#docscontentgatsby-queries-mutations️)
+    - [**🌍⇒docs/content/history-api🗺️**](#docscontenthistory-api️)
+    - [**🌍⇒docs/content/projects🗺️**](#docscontentprojects️)
+    - [**🌍⇒docs/content/recent-projects🗺️**](#docscontentrecent-projects️)
+    - [**🌍⇒docs/content/trouble-shooting🗺️**](#docscontenttrouble-shooting️)
+    - [**🌍⇒docs/docs/appendix🗺️**](#docsdocsappendix️)
+    - [**🌍⇒docs/docs/bash🗺️**](#docsdocsbash️)
+    - [**🌍⇒docs/docs/content🗺️**](#docsdocscontent️)
+    - [**🌍⇒docs/docs/css🗺️**](#docsdocscss️)
+    - [**🌍⇒docs/docs/data-structures-docs🗺️**](#docsdocsdata-structures-docs️)
+    - [**🌍⇒docs/docs/git-reference🗺️**](#docsdocsgit-reference️)
+    - [**🌍⇒docs/docs/git-repos🗺️**](#docsdocsgit-repos️)
+    - [**🌍⇒docs/docs/html-spec🗺️**](#docsdocshtml-spec️)
+    - [**🌍⇒docs/docs/markdown🗺️**](#docsdocsmarkdown️)
+    - [**🌍⇒docs/docs/no-whiteboarding🗺️**](#docsdocsno-whiteboarding️)
+    - [**🌍⇒docs/docs/node-docs-complete🗺️**](#docsdocsnode-docs-complete️)
+    - [**🌍⇒docs/docs/node-docs-full🗺️**](#docsdocsnode-docs-full️)
+    - [**🌍⇒docs/docs/regex-in-js🗺️**](#docsdocsregex-in-js️)
+    - [**🌍⇒docs/docs/sitemap🗺️**](#docsdocssitemap️)
+    - [**🌍⇒docs/faq/contact🗺️**](#docsfaqcontact️)
+    - [**🌍⇒docs/faq/plug-ins🗺️**](#docsfaqplug-ins️)
+    - [**🌍⇒docs/interact/callstack-visual🗺️**](#docsinteractcallstack-visual️)
+    - [**🌍⇒docs/interact/clock🗺️**](#docsinteractclock️)
+    - [**🌍⇒docs/interact/jupyter-notebooks🗺️**](#docsinteractjupyter-notebooks️)
+    - [**🌍⇒docs/interact/other-sites🗺️**](#docsinteractother-sites️)
+    - [**🌍⇒docs/interact/video-chat🗺️**](#docsinteractvideo-chat️)
+    - [**🌍⇒docs/javascript/arrow-functions🗺️**](#docsjavascriptarrow-functions️)
+    - [**🌍⇒docs/javascript/await-keyword🗺️**](#docsjavascriptawait-keyword️)
+    - [**🌍⇒docs/javascript/bigo🗺️**](#docsjavascriptbigo️)
+    - [**🌍⇒docs/javascript/clean-code🗺️**](#docsjavascriptclean-code️)
+    - [**🌍⇒docs/javascript/constructor-functions🗺️**](#docsjavascriptconstructor-functions️)
+    - [**🌍⇒docs/javascript/promises🗺️**](#docsjavascriptpromises️)
+    - [**🌍⇒docs/javascript/review🗺️**](#docsjavascriptreview️)
+    - [**🌍⇒docs/javascript/this-is-about-this🗺️**](#docsjavascriptthis-is-about-this️)
+    - [**🌍⇒docs/projects/medium-links🗺️**](#docsprojectsmedium-links️)
+    - [**🌍⇒docs/projects/my-websites🗺️**](#docsprojectsmy-websites️)
+    - [**🌍⇒docs/python/at-length🗺️**](#docspythonat-length️)
+    - [**🌍⇒docs/python/basics🗺️**](#docspythonbasics️)
+    - [**🌍⇒docs/python/cheat-sheet🗺️**](#docspythoncheat-sheet️)
+    - [**🌍⇒docs/python/comprehensive-guide🗺️**](#docspythoncomprehensive-guide️)
+    - [**🌍⇒docs/python/examples🗺️**](#docspythonexamples️)
+    - [**🌍⇒docs/python/flow-control🗺️**](#docspythonflow-control️)
+    - [**🌍⇒docs/python/functions🗺️**](#docspythonfunctions️)
+    - [**🌍⇒docs/python/google-sheets-api🗺️**](#docspythongoogle-sheets-api️)
+    - [**🌍⇒docs/python/intro-for-js-devs🗺️**](#docspythonintro-for-js-devs️)
+    - [**🌍⇒docs/python/python-ds🗺️**](#docspythonpython-ds️)
+    - [**🌍⇒docs/python/snippets🗺️**](#docspythonsnippets️)
+    - [**🌍⇒docs/quick-reference/Emmet🗺️**](#docsquick-referenceemmet️)
+    - [**🌍⇒docs/quick-reference/all-emojis🗺️**](#docsquick-referenceall-emojis️)
+    - [**🌍⇒docs/quick-reference/create-react-app🗺️**](#docsquick-referencecreate-react-app️)
+    - [**🌍⇒docs/quick-reference/git-bash🗺️**](#docsquick-referencegit-bash️)
+    - [**🌍⇒docs/quick-reference/git-tricks🗺️**](#docsquick-referencegit-tricks️)
+    - [**🌍⇒docs/quick-reference/google-firebase🗺️**](#docsquick-referencegoogle-firebase️)
+    - [**🌍⇒docs/quick-reference/heroku-error-codes🗺️**](#docsquick-referenceheroku-error-codes️)
+    - [**🌍⇒docs/quick-reference/installation🗺️**](#docsquick-referenceinstallation️)
+    - [**🌍⇒docs/quick-reference/markdown-dropdowns🗺️**](#docsquick-referencemarkdown-dropdowns️)
+    - [**🌍⇒docs/quick-reference/minifiction🗺️**](#docsquick-referenceminifiction️)
+    - [**🌍⇒docs/quick-reference/new-repo-instructions🗺️**](#docsquick-referencenew-repo-instructions️)
+    - [**🌍⇒docs/quick-reference/psql-setup🗺️**](#docsquick-referencepsql-setup️)
+    - [**🌍⇒docs/quick-reference/pull-request-rubric🗺️**](#docsquick-referencepull-request-rubric️)
+    - [**🌍⇒docs/quick-reference/quick-links🗺️**](#docsquick-referencequick-links️)
+    - [**🌍⇒docs/quick-reference/topRepos🗺️**](#docsquick-referencetoprepos️)
+    - [**🌍⇒docs/quick-reference/understanding-path🗺️**](#docsquick-referenceunderstanding-path️)
+    - [**🌍⇒docs/quick-reference/vscode-themes🗺️**](#docsquick-referencevscode-themes️)
+    - [**🌍⇒docs/react/cheatsheet🗺️**](#docsreactcheatsheet️)
+    - [**🌍⇒docs/react/createReactApp🗺️**](#docsreactcreatereactapp️)
+    - [**🌍⇒docs/react/demo🗺️**](#docsreactdemo️)
+    - [**🌍⇒docs/react/jsx🗺️**](#docsreactjsx️)
+    - [**🌍⇒docs/react/react-docs🗺️**](#docsreactreact-docs️)
+    - [**🌍⇒docs/react/react-in-depth🗺️**](#docsreactreact-in-depth️)
+    - [**🌍⇒docs/react/react2🗺️**](#docsreactreact2️)
+    - [**🌍⇒docs/react/render-elements🗺️**](#docsreactrender-elements️)
+    - [**🌍⇒docs/reference/awesome-lists🗺️**](#docsreferenceawesome-lists️)
+    - [**🌍⇒docs/reference/awesome-static🗺️**](#docsreferenceawesome-static️)
+    - [**🌍⇒docs/reference/bookmarks🗺️**](#docsreferencebookmarks️)
+    - [**🌍⇒docs/reference/embed-the-web🗺️**](#docsreferenceembed-the-web️)
+    - [**🌍⇒docs/reference/github-search🗺️**](#docsreferencegithub-search️)
+    - [**🌍⇒docs/reference/how-2-reinstall-npm🗺️**](#docsreferencehow-2-reinstall-npm️)
+    - [**🌍⇒docs/reference/how-to-kill-a-process🗺️**](#docsreferencehow-to-kill-a-process️)
+    - [**🌍⇒docs/reference/installing-node🗺️**](#docsreferenceinstalling-node️)
+    - [**🌍⇒docs/reference/intro-to-nodejs🗺️**](#docsreferenceintro-to-nodejs️)
+    - [**🌍⇒docs/reference/notes-template🗺️**](#docsreferencenotes-template️)
+    - [**🌍⇒docs/reference/psql🗺️**](#docsreferencepsql️)
+    - [**🌍⇒docs/reference/resources🗺️**](#docsreferenceresources️)
+    - [**🌍⇒docs/reference/vscode🗺️**](#docsreferencevscode️)
+    - [**🌍⇒docs/reference/web-api's🗺️**](#docsreferenceweb-apis️)
+    - [**🌍⇒docs/tools/data-structures🗺️**](#docstoolsdata-structures️)
+    - [**🌍⇒docs/tools/dev-utilities🗺️**](#docstoolsdev-utilities️)
+    - [**🌍⇒docs/tools/google-cloud🗺️**](#docstoolsgoogle-cloud️)
+    - [**🌍⇒docs/tools/markdown-html🗺️**](#docstoolsmarkdown-html️)
+    - [**🌍⇒docs/tools/more-tools🗺️**](#docstoolsmore-tools️)
+    - [**🌍⇒docs/tutorials/google-lighthouse-cli🗺️**](#docstutorialsgoogle-lighthouse-cli️)
+    - [🚀 Quick start](#-quick-start)
+    - [🧐 What's inside?](#-whats-inside)
+    - [🎓 Learning Gatsby](#-learning-gatsby)
+    - [💫 Deploy](#-deploy)
+  - [Gatsby Project Structure | Gatsby](#gatsby-project-structure--gatsby)
+    - [Folders](#folders)
+    - [Files](#files)
+    - [Miscellaneous](#miscellaneous)
+  - [Layout Components | Gatsby](#layout-components--gatsby)
+    - [Gatsby's approach to layouts](#gatsbys-approach-to-layouts)
+    - [What are layout components?](#what-are-layout-components)
+    - [How to create layout components](#how-to-create-layout-components)
+    - [How to import and add layout components to pages](#how-to-import-and-add-layout-components-to-pages)
+    - [How to prevent layout components from unmounting](#how-to-prevent-layout-components-from-unmounting)
+  - [Adding Markdown Pages | Gatsby](#adding-markdown-pages--gatsby)
+    - [Read files into Gatsby from the filesystem](#read-files-into-gatsby-from-the-filesystem)
+    - [Install](#install)
+    - [Add plugin](#add-plugin)
+    - [Transform Markdown to HTML and frontmatter to data using `gatsby-transformer-remark`](#transform-markdown-to-html-and-frontmatter-to-data-using-gatsby-transformer-remark)
+    - [Install transformer plugin](#install-transformer-plugin)
+    - [Configure plugin](#configure-plugin)
+    - [Add a Markdown file](#add-a-markdown-file)
+    - [Frontmatter for metadata in Markdown files](#frontmatter-for-metadata-in-markdown-files)
+    - [Create a Collection Route for the Markdown files](#create-a-collection-route-for-the-markdown-files)
+    - [Other tutorials](#other-tutorials)
+  - [Technoloy](#technoloy)
+  - [SOURCECODE](#sourcecode)
+  - [Source Code](#source-code)
+  - [Component Structure](#component-structure)
+  - [Templates](#templates)
+
+</details>
+
+#### [Github Org Link](https://github.com/bgoonz/BLOG_NETLIFY_CMS)
 
 </div>
 
 ---
 
-### https://app.stackbit.com/studio/62458daac8991600bdbe80cb/
-
-
-
 <div align="center">
 
-##### [Cloudfare-Backup](https://bgoonz-blog-2-0.pages.dev/) ⇨ [search](https://www.algolia.com/realtime-search-demo/web-dev-resource-hub-9e6b8aa8-6106-44c5-9f59-ff3f9531abd4) ⇨ [Backup Repo Deploy](https://bgoonzblog20-backup.netlify.app/#gsc.tab=0) ⇨ [Github pages](https://bgoonz.github.io/BGOONZ_BLOG_2.0/) ⇨ [Go To Site Wiki](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki) ⇨ [Gatsby Cloud Version](https://bgoonzblog20master.gatsbyjs.io/)
+###### [Cloudfare-Backup](https://bgoonz-blog-2-0.pages.dev/) ⇨ [search](https://www.algolia.com/realtime-search-demo/web-dev-resource-hub-9e6b8aa8-6106-44c5-9f59-ff3f9531abd4) ⇨ [Backup Repo Deploy](https://bgoonzblog20-backup.netlify.app/#gsc.tab=0) ⇨ [Github pages](https://bgoonz.github.io/BGOONZ_BLOG_2.0/) ⇨ [Go To Site Wiki](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki) ⇨ [Gatsby Cloud Version](https://bgoonzblog20master.gatsbyjs.io/)
 
-###### [⇨Privacy policy⇦](https://codepen.io/bgoonz/pen/LYLJZrW)
+####### [⇨Privacy policy⇦](https://codepen.io/bgoonz/pen/LYLJZrW)
 
-###### [⇨ Changes ⇦](https://visualping.io/jobs/3577650)
+####### [⇨ Changes ⇦](https://visualping.io/jobs/3577650)
 
 </div>
 <div align="center">
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a1b7ee1a-11a7-4bd2-a341-2260656e216f/deploy-status)](https://app.netlify.com/sites/bgoonz-blog/deploys)[![CodeFactor](https://www.codefactor.io/repository/github/bgoonz/bgoonz_blog_2.0/badge)](https://www.codefactor.io/repository/github/bgoonz/bgoonz_blog_2.0)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c04630c5-9553-489c-9df9-43a0e6c4b753/deploy-status)](https://app.netlify.com/sites/blogcmsbgoonz/deploys)
 ![GitHub visitors](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=bgoonz.visitor.badge.reloaded&color=00bbbb&style=for-the-badge&logo=github)
 
 ---
 
 ![preview](https://github.com/bgoonz/BGOONZ_BLOG_2.0/blob/master/static/images/blog-preview.png?raw=true)
 
-  
-  
 ---
-  
+
 <a href="https://testmysite.io/61e5ff836a840eeeef7e78e9/bgoonz-blog.netlify.app" rel="Test My Site Results">![Foo](https://github.com/bgoonz/BGOONZ_BLOG_2.0/blob/master/static/images/Screenshot%202022-03-30%20at%2012-37-24%20Website%20Speed%20Test%20Tool%20-%20Testmysite.io%20by%20Netlify.png?raw=true)</a>
-  
+
 </div>
 
 <details>
 
 <summary> Bash Commands</summary>
 
-## My Commands
+### My Commands
 
-## # Find
+### ## Find
 
-# To find files by case-insensitive extension (ex: .jpg, .jpg, .jpG)
+## To find files by case-insensitive extension (ex: .jpg, .jpg, .jpG)
 
 find . -iname "\*.jpg"
 
-# To find directories
+## To find directories
 
 find . -type d
 
-# To find files
+## To find files
 
 find . -type f
 
-# To find files by octal permission
+## To find files by octal permission
 
 find . -type f -perm 777
 
-# To find files with setuid bit set
+## To find files with setuid bit set
 
 find . -xdev \( -perm -4000 \) -type f -print0 | xargs -0 ls -l
 
-# To find files with extension '.txt' and remove them
+## To find files with extension '.txt' and remove them
 
 find ./path/ -name '\*.txt' -exec rm '{}' \;
 
-# To find files with extension '.txt' and look for a string into them
+## To find files with extension '.txt' and look for a string into them
 
 find ./path/ -name '\*.txt' | xargs grep 'string'
 
-# To find files with size bigger than 5 Mebibyte and sort them by size
+## To find files with size bigger than 5 Mebibyte and sort them by size
 
 find . -size +5M -type f -print0 | xargs -0 ls -Ssh | sort -z
 
-# To find files bigger than 2 Megabyte and list them
+## To find files bigger than 2 Megabyte and list them
 
 find . -type f -size +200000000c -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
 
-# To find files modified more than 7 days ago and list file information
+## To find files modified more than 7 days ago and list file information
 
 find . -type f -mtime +7d -ls
 
-# To find symlinks owned by a user and list file information
+## To find symlinks owned by a user and list file information
 
 find . -type l -user <username-or-userid> -ls
 
-# To search for and delete empty directories
+## To search for and delete empty directories
 
 find . -type d -empty -exec rmdir {} \;
 
-# To search for directories named build at a max depth of 2 directories
+## To search for directories named build at a max depth of 2 directories
 
 find . -maxdepth 2 -name build -type d
 
-# To search all files who are not in .git directory
+## To search all files who are not in .git directory
 
 find . ! -iwholename '_.git_' -type f
 
-# To find all files that have the same node (hard link) as MY_FILE_HERE
+## To find all files that have the same node (hard link) as MY_FILE_HERE
 
 find . -type f -samefile MY_FILE_HERE 2> /dev/null
 
-# To find all files in the current directory and modify their permissions
+## To find all files in the current directory and modify their permissions
 
 find . -type f -exec chmod 644 {} \;
 
-# 1. Remove spaces from file and folder names and then remove numbers from files and folder names
+## 1. Remove spaces from file and folder names and then remove numbers from files and folder names
 
-## Description: need to : `sudo apt install rename`
+### Description: need to : `sudo apt install rename`
 
 > Notes: Issue when renaming file without numbers collides with existing file name...
 
-## # code
+### ## code
 
 ```sh
 find . -name "* *" -type d | rename 's/ /_/g'
 find . -name "* *" -type f | rename 's/ /_/g'
 ```
 
-```sh
+````sh
 
 ```sh
 find $dir -type f | sed 's|\(.*/\)[^A-Z]*\([A-Z].*\)|mv \"&\" \"\1\2\"|' | sh
@@ -137,11 +533,11 @@ for i in *.html; do mv "$i" "${i%-*}.html"; done
 for i in *.*; do mv "$i" "${i%-*}.${i##*.}"; done
 
 ---
-## Description: combine the contents of every file in the contaning directory.
+### Description: combine the contents of every file in the contaning directory.
 
 > Notes: this includes the contents of the file it's self...
 
-## # code:
+### ## code:
 
 ```js
 //APPEND-DIR.js
@@ -153,17 +549,17 @@ fs.writeFile('output.md', cat, err =>  {
   if (err) throw err;
 });
 
-```
+````
 
 ---
 
-# 2. Download Website Using Wget
+## 2. Download Website Using Wget
 
-## Description
+### Description
 
 > Notes: ==> sudo apt install wget
 
-## ## code
+### ### code
 
 ```sh
 
@@ -173,13 +569,13 @@ wget --limit-rate=200k --no-clobber --convert-links --random-wait -r -p -E -e ro
 
 ---
 
-# 3. Clean Out Messy Git Repo
+## 3. Clean Out Messy Git Repo
 
-## Description: recursively removes git related folders as well as internal use files / attributions in addition to empty folders
+### Description: recursively removes git related folders as well as internal use files / attributions in addition to empty folders
 
 > Notes: To clear up clutter in repositories that only get used on your local machine.
 
-## ## code
+### ### code
 
 ```sh
 
@@ -193,15 +589,15 @@ find . \( -name "*SECURITY.txt" -o -name "*RELEASE.txt" -o  -name "*CHANGELOG.tx
 
 ---
 
-# 4. clone all of a user's git repositories
+## 4. clone all of a user's git repositories
 
-## Description: clone all of a user or organization's git repositories
+### Description: clone all of a user or organization's git repositories
 
 > Notes:
 
-## ## code
+### ### code
 
-# Generalized
+## Generalized
 
 ```sh
 
@@ -212,7 +608,7 @@ curl "https://api.github.com/$CNTX/$NAME/repos?page=$PAGE&per_page=100" |
   xargs -L1 git clone
 ```
 
-# Clone all Git User
+## Clone all Git User
 
 ```sh
 CNTX={users}; NAME={bgoonz}; PAGE=1
@@ -223,7 +619,7 @@ curl "https://api.github.com/$CNTX/$NAME/repos?page=$PAGE&per_page=200"?branch=m
 
 ```
 
-# Clone all Git Organization
+## Clone all Git Organization
 
 ```sh
 
@@ -237,11 +633,11 @@ curl "https://api.github.com/$CNTX/$NAME/repos?page=$PAGE&per_page=200"?branch=m
 
 ---
 
-# 5. Git Workflow
+## 5. Git Workflow
 
-## Description
+### Description
 
-## ## code
+### ### code
 
 ```sh
 git pull
@@ -282,13 +678,13 @@ git push -u origin preview
 
 ---
 
-# 6. Recursive Unzip In Place
+## 6. Recursive Unzip In Place
 
-## Description: recursively unzips folders and then deletes the zip file by the same name
+### Description: recursively unzips folders and then deletes the zip file by the same name
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -300,13 +696,13 @@ find . -name "*.zip" -type f -print -delete
 
 ---
 
-# 7. git pull keeping local changes
+## 7. git pull keeping local changes
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -318,13 +714,13 @@ git stash pop
 
 ---
 
-# 8. Prettier Code Formatter
+## 8. Prettier Code Formatter
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -336,13 +732,13 @@ prettier --write .
 
 ---
 
-# 9. Pandoc
+## 9. Pandoc
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -356,13 +752,13 @@ find ./ -iname "*.docx" -type f -exec sh -c 'pandoc "${0}" -o "${0%.docx}.md"' {
 
 ---
 
-# 10. Gitpod Installs
+## 10. Gitpod Installs
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 sudo apt install tree
@@ -385,13 +781,13 @@ npm-recursive-install
 
 ---
 
-# 11. Repo Utils Package
+## 11. Repo Utils Package
 
-## Description: my standard repo utis package
+### Description: my standard repo utis package
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 npm i @bgoonz11/repoutils
@@ -400,13 +796,13 @@ npm i @bgoonz11/repoutils
 
 ---
 
-# 12. Unix Tree Package Usage
+## 12. Unix Tree Package Usage
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 tree -d -I  'node_modules'
@@ -427,13 +823,13 @@ tree -f > README.md
 
 ---
 
-# 13. Find & Replace string in file & folder names recursively
+## 13. Find & Replace string in file & folder names recursively
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -455,13 +851,13 @@ find . -type d -exec rename 's/es6//g' {} +
 
 ---
 
-# 14. Remove double extensions
+## 14. Remove double extensions
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 #!/bin/bash
@@ -497,13 +893,13 @@ done
 
 ---
 
-# 15. Truncate folder names down to 12 characters
+## 15. Truncate folder names down to 12 characters
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -513,13 +909,13 @@ for d in ./*; do mv $d ${d:0:12}; done
 
 ---
 
-# 16.Appendir.js
+## 16.Appendir.js
 
-## Description: combine the contents of every file in the contaning directory
+### Description: combine the contents of every file in the contaning directory
 
 > Notes: this includes the contents of the file it's self...
 
-## ## code
+### ### code
 
 ```js
 //APPEND-DIR.js
@@ -532,13 +928,13 @@ fs.writeFile('output.md', cat, (err) => {
 
 ---
 
-# 17. Replace space in filename with underscore
+## 17. Replace space in filename with underscore
 
-## Description: followed by replace `'#' with '_'` in directory name
+### Description: followed by replace `'#' with '_'` in directory name
 
 > Notes: Can be re-purposed to find and replace any set of strings in file or folder names.
 
-## ## code
+### ### code
 
 ```sh
 find . -name "* *" -type f | rename 's/_//g'
@@ -549,13 +945,13 @@ find . -name "* *" -type d | rename 's/#/_/g'
 
 ---
 
-# 18. Filter & delete files by name and extension
+## 18. Filter & delete files by name and extension
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 find . -name '.bin' -type d -prune -exec rm -rf '{}' +
@@ -576,9 +972,9 @@ find . -name 'left.html' -type f -prune -exec rm -rf '{}' +
 
 ---
 
-# 19. Remove lines containing string
+## 19. Remove lines containing string
 
-## Description
+### Description
 
 > Notes: Remove lines not containing `'.js'`
 
@@ -588,7 +984,7 @@ sudo sed -i '/\.js/!d' ./*scrap2.md
 
 ```
 
-## ## code
+### ### code
 
 ```sh
 sudo sed -i '/githubusercontent/d' ./*sandbox.md
@@ -603,9 +999,9 @@ sudo sed -i '/author/d' ./*
 
 ---
 
-# 20. Remove duplicate lines from a text file
+## 20. Remove duplicate lines from a text file
 
-## Description
+### Description
 
 > Notes:
 > //...syntax of uniq...//
@@ -614,7 +1010,7 @@ sudo sed -i '/author/d' ./*
 
 Now, let's understand the use of this with the help of an example. Suppose you have a text file named kt.txt which contains repeated lines that needs to be omitted. This can simply be done with uniq.
 
-## ## code
+### ### code
 
 ```sh
 sudo apt install uniq
@@ -624,13 +1020,13 @@ uniq -u input.txt output.txt
 
 ---
 
-# 21. Remove lines containing string
+## 21. Remove lines containing string
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 sudo sed -i '/githubusercontent/d' ./*sandbox.md
@@ -662,13 +1058,13 @@ sudo sed -i '/right\.html/d' ./right.html
 
 ---
 
-# 22. Zip directory excluding .git and node_modules all the way down (Linux)
+## 22. Zip directory excluding .git and node_modules all the way down (Linux)
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -678,24 +1074,24 @@ zip -r $1.$TSTAMP.zip $1 -x "**.git/*" -x "**node_modules/*" `shift; echo $@;`
 
 printf "\nCreated: $1.$TSTAMP.zip\n"
 
-# usage:
-# - zipdir thedir
-# - zip thedir -x "**anotherexcludedsubdir/*"    (important the double quotes to prevent glob expansion)
+## usage:
+## - zipdir thedir
+## - zip thedir -x "**anotherexcludedsubdir/*"    (important the double quotes to prevent glob expansion)
 
-# if in windows/git-bash, add 'zip' command this way:
-# https://stackoverflow.com/a/55749636/1482990
+## if in windows/git-bash, add 'zip' command this way:
+## https://stackoverflow.com/a/55749636/1482990
 
 ```
 
 ---
 
-# 23. Delete files containing a certain string
+## 23. Delete files containing a certain string
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 find . | xargs grep -l www.redhat.com | awk '{print "rm "$1}' >  doit.sh
@@ -706,19 +1102,19 @@ source doit.sh
 
 ---
 
-# 24
+## 24
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
 #!/bin/sh
 
-# find ./ | grep -i "\.*$" > files
+## find ./ | grep -i "\.*$" > files
 find ./ | sed -E -e 's/([^ ]+[ ]+){8}//' | grep -i "\.*$"> files
 listing="files"
 
@@ -785,7 +1181,7 @@ echo '  </style> '
 
   echo ""
 
-  # continue with the HTML stuff
+  ## continue with the HTML stuff
 
   echo ""
 
@@ -795,9 +1191,9 @@ echo '  </style> '
 
   awk '{print "<li> <a href=\""$1"\"> ",$1,"&nbsp;</a> </li> "}' $listing
 
-  # awk '{print "<li> "};
+  ## awk '{print "<li> "};
 
-  #  {print " <a href=\""$1"\"> ",$1,"</a> </li> &nbsp;"}' \ $listing
+  ##  {print " <a href=\""$1"\"> ",$1,"</a> </li> &nbsp;"}' \ $listing
 
   echo ""
 
@@ -815,9 +1211,9 @@ cmd $listing --sort=extension > > $html
 
 ---
 
-# 25. Index of Iframes
+## 25. Index of Iframes
 
-## Description: Creates an index.html file that contains all the files in the working directory or any of it's sub folders as iframes instead of anchor tags
+### Description: Creates an index.html file that contains all the files in the working directory or any of it's sub folders as iframes instead of anchor tags
 
 > Notes: Useful Follow up Code:
 
@@ -825,13 +1221,13 @@ cmd $listing --sort=extension > > $html
 
 ```
 
-## ## code
+### ### code
 
 ```sh
 
 #!/bin/sh
 
-# find ./ | grep -i "\.*$" > files
+## find ./ | grep -i "\.*$" > files
 find ./ | sed -E -e 's/([^ ]+[ ]+){8}//' | grep -i "\.*$"> files
 listing="files"
 
@@ -897,7 +1293,7 @@ echo '  </style> '
 
   echo ""
 
-  # continue with the HTML stuff
+  ## continue with the HTML stuff
 
   echo ""
 
@@ -907,9 +1303,9 @@ echo '  </style> '
 
   awk '{print "<iframe  style="-webkit-transform:scale(0.7);-moz-transform-scale(0.7); src=\""$1"\">","</iframe>"}' $listing
 
-  # awk '{print "<li> "};
+  ## awk '{print "<li> "};
 
-  #  {print " <a href=\""$1"\"> ",$1,"</a> </li> &nbsp;"}' \ $listing
+  ##  {print " <a href=\""$1"\"> ",$1,"</a> </li> &nbsp;"}' \ $listing
 
   echo ""
 
@@ -927,13 +1323,13 @@ cmd $listing --sort=extension > > $html
 
 ---
 
-# 26. Filter Corrupted Git Repo For Troublesome File
+## 26. Filter Corrupted Git Repo For Troublesome File
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -943,9 +1339,9 @@ git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch assets/_in
 
 ---
 
-# 27. OVERWRITE LOCAL CHANGES
+## 27. OVERWRITE LOCAL CHANGES
 
-## Description
+### Description
 
 Important: If you have any local changes, they will be lost. With or without --hard option, any local commits that haven't been pushed will be lost.[*]
 If you have any files that are not tracked by Git (e.g. uploaded user content), these files will not be affected.
@@ -953,24 +1349,24 @@ If you have any files that are not tracked by Git (e.g. uploaded user content), 
 > Notes:
 > First, run a fetch to update all origin/<branch> refs to latest:
 
-## ## code
+### ### code
 
 ```sh
 
 git fetch --all
-# Backup your current branch:
+## Backup your current branch:
 
 git branch backup-master
-# Then, you have two options:
+## Then, you have two options:
 
 git reset --hard origin/master
-# OR If you are on some other branch:
+## OR If you are on some other branch:
 
 git reset --hard origin/<branch_name>
-# Explanation:
-# git fetch downloads the latest from remote without trying to merge or rebase anything.
+## Explanation:
+## git fetch downloads the latest from remote without trying to merge or rebase anything.
 
-# Then the git reset resets the master branch to what you just fetched. The --hard option changes all the files in your working tree to match the files in origin/master
+## Then the git reset resets the master branch to what you just fetched. The --hard option changes all the files in your working tree to match the files in origin/master
 git fetch --all
 git reset --hard origin/master
 
@@ -978,9 +1374,9 @@ git reset --hard origin/master
 
 ---
 
-# 28. Remove Submodules
+## 28. Remove Submodules
 
-## Description: To remove a submodule you need to
+### Description: To remove a submodule you need to
 
 > Notes:
 
@@ -992,7 +1388,7 @@ git reset --hard origin/master
 > Commit git commit -m "Removed submodule "
 > Delete the now untracked submodule files rm -rf path_to_submodule
 
-## ## code
+### ### code
 
 ```sh
 git submodule deinit
@@ -1000,13 +1396,13 @@ git submodule deinit
 
 ---
 
-# 29. GET GISTS
+## 29. GET GISTS
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 sudo apt install wget
@@ -1023,13 +1419,13 @@ wget -q -O - https://api.github.com/users/thomasmb/gists | grep raw_url | awk -F
 
 ---
 
-# 30. Remove Remote OriginL
+## 30. Remove Remote OriginL
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -1039,13 +1435,13 @@ git remote remove origin
 
 ---
 
-# 31. just clone .git folder
+## 31. just clone .git folder
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -1055,13 +1451,13 @@ git clone --bare --branch=master --single-branch https://github.com/bgoonz/My-We
 
 ---
 
-# 32. Undo recent pull request
+## 32. Undo recent pull request
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -1071,16 +1467,16 @@ git reset --hard master@{"10 minutes ago"}
 
 ---
 
-# 33. Lebab
+## 33. Lebab
 
-## Description: ES5 --> ES6
+### Description: ES5 --> ES6
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
-# Safe:
+## Safe:
 
  lebab --replace ./ --transform arrow
  lebab --replace ./ --transform arrow-return
@@ -1092,7 +1488,7 @@ git reset --hard master@{"10 minutes ago"}
  lebab --replace ./ --transform obj-shorthand
  lebab --replace ./ --transform multi-var
 
-# ALL:
+## ALL:
 
 lebab --replace ./ --transform obj-method
 lebab --replace ./ --transform class
@@ -1128,13 +1524,13 @@ lebab --replace ./ --transform includes
 
 ---
 
-# 34. Troubleshoot Ubuntu Input/Output Error
+## 34. Troubleshoot Ubuntu Input/Output Error
 
-## Description: Open Powershell as Administrator
+### Description: Open Powershell as Administrator
 
 > Notes:
 
-## ## code
+### ### code
 
 ```ps1
 
@@ -1146,13 +1542,13 @@ lebab --replace ./ --transform includes
 
 ---
 
-# 35. Export Medium as Markdown
+## 35. Export Medium as Markdown
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 npm i mediumexporter -g
@@ -1163,13 +1559,13 @@ mediumexporter https://medium.com/codex/fundamental-data-structures-in-javascrip
 
 ---
 
-# 36. Delete files in violation of a given size range (100MB for git)
+## 36. Delete files in violation of a given size range (100MB for git)
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -1181,13 +1577,13 @@ find . -size +98M -a -print -a -exec rm -f {} \;
 
 ---
 
-# 37. download all links of given file type
+## 37. download all links of given file type
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -1197,13 +1593,13 @@ wget -r -A.pdf https://overapi.com/git
 
 ---
 
-# 38. Kill all node processes
+## 38. Kill all node processes
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 killall -s KILL node
@@ -1212,11 +1608,11 @@ killall -s KILL node
 
 ---
 
-# 39. Remove string from file names recursively
+## 39. Remove string from file names recursively
 
-## Description: In the example below I am using this command to remove the string "-master" from all file names in the working directory and all of it's sub directories
+### Description: In the example below I am using this command to remove the string "-master" from all file names in the working directory and all of it's sub directories
 
-## ## code
+### ### code
 
 ```sh
 find <mydir>  -type f -exec sed -i 's/<string1> /<string2> /g' {} +
@@ -1236,13 +1632,13 @@ find . -type d -exec rename 's/-master//g' {} +
 
 ---
 
-# 40. Remove spaces from file and folder names recursively
+## 40. Remove spaces from file and folder names recursively
 
-## Description: replaces spaces in file and folder names with an `_` underscore
+### Description: replaces spaces in file and folder names with an `_` underscore
 
 > Notes: need to run `sudo apt install rename` to use this command
 
-## ## code
+### ### code
 
 ```sh
 
@@ -1252,13 +1648,13 @@ find . -name "* *" -type f | rename 's/ /_/g'
 
 ---
 
-# 41. Zip Each subdirectories in a given directory into their own zip file
+## 41. Zip Each subdirectories in a given directory into their own zip file
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 for i in */; do zip -r "${i%/}.zip" "$i"; done
@@ -1267,15 +1663,15 @@ for i in */; do zip -r "${i%/}.zip" "$i"; done
 
 ---
 
-# 90
+## 90
 
-# 91. Unzip PowerShell
+## 91. Unzip PowerShell
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```ps1
 
@@ -1294,7 +1690,7 @@ foreach ($ZipFile in $ZipFiles) {
     Write-Progress -Activity "Unzipping to $($UnzipPath)" -PercentComplete (($progress / ($ZipFiles.Count + 1)) * 100) -CurrentOperation $ZipFile.FullName -Status "File $($Progress) of $($ZipFiles.Count)"
     $ZipFolder = $Shell.NameSpace($ZipFile.fullname)
 
-    $Location.Copyhere($ZipFolder.items(), 1040) # 1040 - No msgboxes to the user - http://msdn.microsoft.com/en-us/library/bb787866%28VS.85%29.aspx
+    $Location.Copyhere($ZipFolder.items(), 1040) ## 1040 - No msgboxes to the user - https://msdn.microsoft.com/library/bb787866%28VS.85%29.aspx
     $progress++
 }
 
@@ -1302,13 +1698,13 @@ foreach ($ZipFile in $ZipFiles) {
 
 ---
 
-# 92. return to bash from zsh
+## 92. return to bash from zsh
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
  sudo apt --purge remove zsh
@@ -1317,13 +1713,13 @@ foreach ($ZipFile in $ZipFiles) {
 
 ---
 
-# 93. Symbolic Link
+## 93. Symbolic Link
 
-## Description: to working directory
+### Description: to working directory
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -1335,13 +1731,13 @@ ln -s "$(pwd)" ~/Downloads
 
 ---
 
-# 94. auto generate readme
+## 94. auto generate readme
 
-## Description: rename existing readme to blueprint.md
+### Description: rename existing readme to blueprint.md
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -1351,13 +1747,13 @@ npx @appnest/readme generate
 
 ---
 
-# 95. Log into postgres
+## 95. Log into postgres
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 sudo -u postgres psql
@@ -1365,7 +1761,7 @@ sudo -u postgres psql
 
 ---
 
-## Technologies Used
+### Technologies Used
 
 | URL                  | <https://bgoonz-blog.netlify.app>                        |
 |----------------------|----------------------------------------------------------|
@@ -1386,13 +1782,13 @@ sudo -u postgres psql
 
 ---
 
-# 96. URL To Subscribe To YouTube Channel
+## 96. URL To Subscribe To YouTube Channel
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```txt
 
@@ -1402,9 +1798,9 @@ https://www.youtube.com/channel/UC1HDa0wWnIKUf-b4yY9JecQ?sub_confirmation=1
 
 ---
 
-# 97. Embed Repl.it In Medium Post
+## 97. Embed Repl.it In Medium Post
 
-## ## code
+### ### code
 
 ```txt
 
@@ -1420,13 +1816,13 @@ https://repl.it/@bgoonz/Database-Prac?lite=true&amp;referrer=https%3A%2F%2Fbryan
 
 ---
 
-# 98
+## 98
 
-## Description
+### Description
 
 > Notes:
 
-## ## code
+### ### code
 
 ```sh
 
@@ -1442,46 +1838,46 @@ find . -name *right.html  -type f -exec sed -i 's/target="_parent"//g' {} +
 
 ![Preview](https://i.imgur.com/nieW1vp.png)
 
-## Wiki Nav
+### Wiki Nav
 
-- [Home](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki)
-- [add copy to code blocks.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/add-copy-to-code-blocks.md)
-- [Add site search w algolia.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/Add-site-search-w-algolia.md)
-- [adding mailing list.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/adding-mailing-list.md)
-- [Adding search 2 gatsby site.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/Adding-search-2-gatsby-site.md)
-- [awesome.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/awesome.md)
-- [broken links.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/broken-links.md)
-- [configure custom domain.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/configure-custom-domain.md)
-- [contentauthoring.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/contentauthoring.md)
-- [full text search w lunar.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/full-text-search-w-lunar.md)
-- [inject 4.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/inject-4.md)
-- [inject3.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/inject3.md)
-- [inject4.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/inject4.md)
-- [injected content part2.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/injected-content-part2.md)
-- [injected js part4.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/injected-js-part4.md)
-- [injected part3.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/injected-part3.md)
-- [links 2 embed.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/links-2-embed.md)
-- [links to remember](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/links-to-remember)
-- [Netlify Injected Content](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/Netlify-Injected-Content)
-- [old version of index.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/old-version-of-index.md)
-- [optimize vscode.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/optimize-vscode.md)
-- [possibly useful snippets.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/possibly-useful-snippets.md)
-- [privacy policy.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/privacy-policy.md)
-- [random stuff.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/random-stuff.md)
-- [random.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/random.md)
-- [ref type](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/ref-type)
-- [SEO.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/SEO.md)
-- [stable points.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/stable-points.md)
-- [tech used.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/tech-used.md)
-- [Technologies Used.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/Technologies-Used.md)
-- [THINGS TO EMBED.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/THINGS-TO-EMBED.md)
-- [validation report.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/validation-report.md)
-- [web archive.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/web-archive.md)
-- [wordpress vs headless cms.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/wordpress-vs-headless-cms.md)
+-   [Home](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki)
+-   [add copy to code blocks.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/add-copy-to-code-blocks.md)
+-   [Add site search w algolia.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/Add-site-search-w-algolia.md)
+-   [adding mailing list.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/adding-mailing-list.md)
+-   [Adding search 2 gatsby site.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/Adding-search-2-gatsby-site.md)
+-   [awesome.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/awesome.md)
+-   [broken links.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/broken-links.md)
+-   [configure custom domain.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/configure-custom-domain.md)
+-   [contentauthoring.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/contentauthoring.md)
+-   [full text search w lunar.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/full-text-search-w-lunar.md)
+-   [inject 4.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/inject-4.md)
+-   [inject3.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/inject3.md)
+-   [inject4.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/inject4.md)
+-   [injected content part2.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/injected-content-part2.md)
+-   [injected js part4.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/injected-js-part4.md)
+-   [injected part3.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/injected-part3.md)
+-   [links 2 embed.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/links-2-embed.md)
+-   [links to remember](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/links-to-remember)
+-   [Netlify Injected Content](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/Netlify-Injected-Content)
+-   [old version of index.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/old-version-of-index.md)
+-   [optimize vscode.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/optimize-vscode.md)
+-   [possibly useful snippets.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/possibly-useful-snippets.md)
+-   [privacy policy.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/privacy-policy.md)
+-   [random stuff.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/random-stuff.md)
+-   [random.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/random.md)
+-   [ref type](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/ref-type)
+-   [SEO.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/SEO.md)
+-   [stable points.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/stable-points.md)
+-   [tech used.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/tech-used.md)
+-   [Technologies Used.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/Technologies-Used.md)
+-   [THINGS TO EMBED.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/THINGS-TO-EMBED.md)
+-   [validation report.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/validation-report.md)
+-   [web archive.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/web-archive.md)
+-   [wordpress vs headless cms.md](https://github.com/bgoonz/BGOONZ_BLOG_2.0/wiki/wordpress-vs-headless-cms.md)
 
 ---
 
-## Dependencies
+### Dependencies
 
 <details>
   <summary>Click to expand!</summary>
@@ -1584,7 +1980,7 @@ find . -name *right.html  -type f -exec sed -i 's/target="_parent"//g' {} +
 
 ---
 
-## Docs Structure
+### Docs Structure
 
 <details>
 <summary>  Docs Structure  </summary>
@@ -1820,397 +2216,397 @@ find . -name *right.html  -type f -exec sed -i 's/target="_parent"//g' {} +
 
 ```
 
-# SITEMAP
+## SITEMAP
 
-# [**🌍⇒https://bgoonz-blog.netlify.app/🗺️**](https://bgoonz-blog.netlify.app/)
+## [**🌍⇒https://blogcmsbgoonz.netlify.app/🗺️**](https://blogcmsbgoonz.netlify.app/)
 
-## [**🌍⇒blog🗺️**](https://bgoonz-blog.netlify.app/blog)
+### [**🌍⇒blog🗺️**](https://blogcmsbgoonz.netlify.app/blog)
 
-## [**🌍⇒docs🗺️**](https://bgoonz-blog.netlify.app/docs)
+### [**🌍⇒docs🗺️**](https://blogcmsbgoonz.netlify.app/docs)
 
-## [**🌍⇒readme🗺️**](https://bgoonz-blog.netlify.app/readme)
+### [**🌍⇒readme🗺️**](https://blogcmsbgoonz.netlify.app/readme)
 
-## [**🌍⇒review🗺️**](https://bgoonz-blog.netlify.app/review)
+### [**🌍⇒review🗺️**](https://blogcmsbgoonz.netlify.app/review)
 
-## [**🌍⇒showcase🗺️**](https://bgoonz-blog.netlify.app/showcase)
+### [**🌍⇒showcase🗺️**](https://blogcmsbgoonz.netlify.app/showcase)
 
-## [**🌍⇒blog/awesome-graphql🗺️**](https://bgoonz-blog.netlify.app/blog/awesome-graphql)
+### [**🌍⇒blog/awesome-graphql🗺️**](https://blogcmsbgoonz.netlify.app/blog/awesome-graphql)
 
-## [**🌍⇒blog/big-o-complexity🗺️**](https://bgoonz-blog.netlify.app/blog/big-o-complexity)
+### [**🌍⇒blog/big-o-complexity🗺️**](https://blogcmsbgoonz.netlify.app/blog/big-o-complexity)
 
-## [**🌍⇒blog/blog-archive🗺️**](https://bgoonz-blog.netlify.app/blog/blog-archive)
+### [**🌍⇒blog/blog-archive🗺️**](https://blogcmsbgoonz.netlify.app/blog/blog-archive)
 
-## [**🌍⇒blog/blogwcomments🗺️**](https://bgoonz-blog.netlify.app/blog/blogwcomments)
+### [**🌍⇒blog/blogwcomments🗺️**](https://blogcmsbgoonz.netlify.app/blog/blogwcomments)
 
-## [**🌍⇒blog/data-structures🗺️**](https://bgoonz-blog.netlify.app/blog/data-structures)
+### [**🌍⇒blog/data-structures🗺️**](https://blogcmsbgoonz.netlify.app/blog/data-structures)
 
-## [**🌍⇒blog/flow-control-in-python🗺️**](https://bgoonz-blog.netlify.app/blog/flow-control-in-python)
+### [**🌍⇒blog/flow-control-in-python🗺️**](https://blogcmsbgoonz.netlify.app/blog/flow-control-in-python)
 
-## [**🌍⇒blog/functions-in-python🗺️**](https://bgoonz-blog.netlify.app/blog/functions-in-python)
+### [**🌍⇒blog/functions-in-python🗺️**](https://blogcmsbgoonz.netlify.app/blog/functions-in-python)
 
-## [**🌍⇒blog/git-gateway🗺️**](https://bgoonz-blog.netlify.app/blog/git-gateway)
+### [**🌍⇒blog/git-gateway🗺️**](https://blogcmsbgoonz.netlify.app/blog/git-gateway)
 
-## [**🌍⇒blog/interview-questions-js🗺️**](https://bgoonz-blog.netlify.app/blog/interview-questions-js)
+### [**🌍⇒blog/interview-questions-js🗺️**](https://blogcmsbgoonz.netlify.app/blog/interview-questions-js)
 
-## [**🌍⇒blog/media-queries-explained🗺️**](https://bgoonz-blog.netlify.app/blog/media-queries-explained)
+### [**🌍⇒blog/media-queries-explained🗺️**](https://blogcmsbgoonz.netlify.app/blog/media-queries-explained)
 
-## [**🌍⇒blog/my-medium🗺️**](https://bgoonz-blog.netlify.app/blog/my-medium)
+### [**🌍⇒blog/my-medium🗺️**](https://blogcmsbgoonz.netlify.app/blog/my-medium)
 
-## [**🌍⇒blog/netlify-cms🗺️**](https://bgoonz-blog.netlify.app/blog/netlify-cms)
+### [**🌍⇒blog/netlify-cms🗺️**](https://blogcmsbgoonz.netlify.app/blog/netlify-cms)
 
-## [**🌍⇒blog/platform-docs🗺️**](https://bgoonz-blog.netlify.app/blog/platform-docs)
+### [**🌍⇒blog/platform-docs🗺️**](https://blogcmsbgoonz.netlify.app/blog/platform-docs)
 
-## [**🌍⇒blog/python-for-js-dev🗺️**](https://bgoonz-blog.netlify.app/blog/python-for-js-dev)
+### [**🌍⇒blog/python-for-js-dev🗺️**](https://blogcmsbgoonz.netlify.app/blog/python-for-js-dev)
 
-## [**🌍⇒blog/python-resources🗺️**](https://bgoonz-blog.netlify.app/blog/python-resources)
+### [**🌍⇒blog/python-resources🗺️**](https://blogcmsbgoonz.netlify.app/blog/python-resources)
 
-## [**🌍⇒blog/web-dev-trends🗺️**](https://bgoonz-blog.netlify.app/blog/web-dev-trends)
+### [**🌍⇒blog/web-dev-trends🗺️**](https://blogcmsbgoonz.netlify.app/blog/web-dev-trends)
 
-## [**🌍⇒blog/web-scraping🗺️**](https://bgoonz-blog.netlify.app/blog/web-scraping)
+### [**🌍⇒blog/web-scraping🗺️**](https://blogcmsbgoonz.netlify.app/blog/web-scraping)
 
-## [**🌍⇒docs/about🗺️**](https://bgoonz-blog.netlify.app/docs/about)
+### [**🌍⇒docs/about🗺️**](https://blogcmsbgoonz.netlify.app/docs/about)
 
-## [**🌍⇒docs/articles🗺️**](https://bgoonz-blog.netlify.app/docs/articles)
+### [**🌍⇒docs/articles🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles)
 
-## [**🌍⇒docs/audio🗺️**](https://bgoonz-blog.netlify.app/docs/audio)
+### [**🌍⇒docs/audio🗺️**](https://blogcmsbgoonz.netlify.app/docs/audio)
 
-## [**🌍⇒docs/career🗺️**](https://bgoonz-blog.netlify.app/docs/career)
+### [**🌍⇒docs/career🗺️**](https://blogcmsbgoonz.netlify.app/docs/career)
 
-## [**🌍⇒docs/community🗺️**](https://bgoonz-blog.netlify.app/docs/community)
+### [**🌍⇒docs/community🗺️**](https://blogcmsbgoonz.netlify.app/docs/community)
 
-## [**🌍⇒docs/content🗺️**](https://bgoonz-blog.netlify.app/docs/content)
+### [**🌍⇒docs/content🗺️**](https://blogcmsbgoonz.netlify.app/docs/content)
 
-## [**🌍⇒docs/docs🗺️**](https://bgoonz-blog.netlify.app/docs/docs)
+### [**🌍⇒docs/docs🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs)
 
-## [**🌍⇒docs/faq🗺️**](https://bgoonz-blog.netlify.app/docs/faq)
+### [**🌍⇒docs/faq🗺️**](https://blogcmsbgoonz.netlify.app/docs/faq)
 
-## [**🌍⇒docs/gallery🗺️**](https://bgoonz-blog.netlify.app/docs/gallery)
+### [**🌍⇒docs/gallery🗺️**](https://blogcmsbgoonz.netlify.app/docs/gallery)
 
-## [**🌍⇒docs/interact🗺️**](https://bgoonz-blog.netlify.app/docs/interact)
+### [**🌍⇒docs/interact🗺️**](https://blogcmsbgoonz.netlify.app/docs/interact)
 
-## [**🌍⇒docs/javascript🗺️**](https://bgoonz-blog.netlify.app/docs/javascript)
+### [**🌍⇒docs/javascript🗺️**](https://blogcmsbgoonz.netlify.app/docs/javascript)
 
-## [**🌍⇒docs/leetcode🗺️**](https://bgoonz-blog.netlify.app/docs/leetcode)
+### [**🌍⇒docs/leetcode🗺️**](https://blogcmsbgoonz.netlify.app/docs/leetcode)
 
-## [**🌍⇒docs/other-content🗺️**](https://bgoonz-blog.netlify.app/docs/other-content)
+### [**🌍⇒docs/other-content🗺️**](https://blogcmsbgoonz.netlify.app/docs/other-content)
 
-## [**🌍⇒docs/privacy-policy🗺️**](https://bgoonz-blog.netlify.app/docs/privacy-policy)
+### [**🌍⇒docs/privacy-policy🗺️**](https://blogcmsbgoonz.netlify.app/docs/privacy-policy)
 
-## [**🌍⇒docs/projects🗺️**](https://bgoonz-blog.netlify.app/docs/projects)
+### [**🌍⇒docs/projects🗺️**](https://blogcmsbgoonz.netlify.app/docs/projects)
 
-## [**🌍⇒docs/python🗺️**](https://bgoonz-blog.netlify.app/docs/python)
+### [**🌍⇒docs/python🗺️**](https://blogcmsbgoonz.netlify.app/docs/python)
 
-## [**🌍⇒docs/quick-reference🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference)
+### [**🌍⇒docs/quick-reference🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference)
 
-## [**🌍⇒docs/react🗺️**](https://bgoonz-blog.netlify.app/docs/react)
+### [**🌍⇒docs/react🗺️**](https://blogcmsbgoonz.netlify.app/docs/react)
 
-## [**🌍⇒docs/reference🗺️**](https://bgoonz-blog.netlify.app/docs/reference)
+### [**🌍⇒docs/reference🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference)
 
-## [**🌍⇒docs/search🗺️**](https://bgoonz-blog.netlify.app/docs/search)
+### [**🌍⇒docs/search🗺️**](https://blogcmsbgoonz.netlify.app/docs/search)
 
-## [**🌍⇒docs/sitemap🗺️**](https://bgoonz-blog.netlify.app/docs/sitemap)
+### [**🌍⇒docs/sitemap🗺️**](https://blogcmsbgoonz.netlify.app/docs/sitemap)
 
-## [**🌍⇒docs/tools🗺️**](https://bgoonz-blog.netlify.app/docs/tools)
+### [**🌍⇒docs/tools🗺️**](https://blogcmsbgoonz.netlify.app/docs/tools)
 
-## [**🌍⇒docs/tutorials🗺️**](https://bgoonz-blog.netlify.app/docs/tutorials)
+### [**🌍⇒docs/tutorials🗺️**](https://blogcmsbgoonz.netlify.app/docs/tutorials)
 
-## [**🌍⇒docs/about/eng-portfolio🗺️**](https://bgoonz-blog.netlify.app/docs/about/eng-portfolio)
+### [**🌍⇒docs/about/eng-portfolio🗺️**](https://blogcmsbgoonz.netlify.app/docs/about/eng-portfolio)
 
-## [**🌍⇒docs/about/ideas-for-this-website🗺️**](https://bgoonz-blog.netlify.app/docs/about/ideas-for-this-website)
+### [**🌍⇒docs/about/ideas-for-this-website🗺️**](https://blogcmsbgoonz.netlify.app/docs/about/ideas-for-this-website)
 
-## [**🌍⇒docs/about/intrests🗺️**](https://bgoonz-blog.netlify.app/docs/about/intrests)
+### [**🌍⇒docs/about/intrests🗺️**](https://blogcmsbgoonz.netlify.app/docs/about/intrests)
 
-## [**🌍⇒docs/about/interview🗺️**](https://bgoonz-blog.netlify.app/docs/about/interview)
+### [**🌍⇒docs/about/interview🗺️**](https://blogcmsbgoonz.netlify.app/docs/about/interview)
 
-## [**🌍⇒docs/about/resume🗺️**](https://bgoonz-blog.netlify.app/docs/about/resume)
+### [**🌍⇒docs/about/resume🗺️**](https://blogcmsbgoonz.netlify.app/docs/about/resume)
 
-## [**🌍⇒docs/articles/basic-web-dev🗺️**](https://bgoonz-blog.netlify.app/docs/articles/basic-web-dev)
+### [**🌍⇒docs/articles/basic-web-dev🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/basic-web-dev)
 
-## [**🌍⇒docs/articles/buffers🗺️**](https://bgoonz-blog.netlify.app/docs/articles/buffers)
+### [**🌍⇒docs/articles/buffers🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/buffers)
 
-## [**🌍⇒docs/articles/dev-dep🗺️**](https://bgoonz-blog.netlify.app/docs/articles/dev-dep)
+### [**🌍⇒docs/articles/dev-dep🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/dev-dep)
 
-## [**🌍⇒docs/articles/event-loop🗺️**](https://bgoonz-blog.netlify.app/docs/articles/event-loop)
+### [**🌍⇒docs/articles/event-loop🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/event-loop)
 
-## [**🌍⇒docs/articles/fs-module🗺️**](https://bgoonz-blog.netlify.app/docs/articles/fs-module)
+### [**🌍⇒docs/articles/fs-module🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/fs-module)
 
-## [**🌍⇒docs/articles/how-the-web-works🗺️**](https://bgoonz-blog.netlify.app/docs/articles/how-the-web-works)
+### [**🌍⇒docs/articles/how-the-web-works🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/how-the-web-works)
 
-## [**🌍⇒docs/articles/http🗺️**](https://bgoonz-blog.netlify.app/docs/articles/http)
+### [**🌍⇒docs/articles/http🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/http)
 
-## [**🌍⇒docs/articles/install🗺️**](https://bgoonz-blog.netlify.app/docs/articles/install)
+### [**🌍⇒docs/articles/install🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/install)
 
-## [**🌍⇒docs/articles/intro🗺️**](https://bgoonz-blog.netlify.app/docs/articles/intro)
+### [**🌍⇒docs/articles/intro🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/intro)
 
-## [**🌍⇒docs/articles/media-queries-no-more🗺️**](https://bgoonz-blog.netlify.app/docs/articles/media-queries-no-more)
+### [**🌍⇒docs/articles/media-queries-no-more🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/media-queries-no-more)
 
-## [**🌍⇒docs/articles/module-exports🗺️**](https://bgoonz-blog.netlify.app/docs/articles/module-exports)
+### [**🌍⇒docs/articles/module-exports🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/module-exports)
 
-## [**🌍⇒docs/articles/nextjs🗺️**](https://bgoonz-blog.netlify.app/docs/articles/nextjs)
+### [**🌍⇒docs/articles/nextjs🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/nextjs)
 
-## [**🌍⇒docs/articles/node-api-express🗺️**](https://bgoonz-blog.netlify.app/docs/articles/node-api-express)
+### [**🌍⇒docs/articles/node-api-express🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/node-api-express)
 
-## [**🌍⇒docs/articles/node-cli-args🗺️**](https://bgoonz-blog.netlify.app/docs/articles/node-cli-args)
+### [**🌍⇒docs/articles/node-cli-args🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/node-cli-args)
 
-## [**🌍⇒docs/articles/node-common-modules🗺️**](https://bgoonz-blog.netlify.app/docs/articles/node-common-modules)
+### [**🌍⇒docs/articles/node-common-modules🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/node-common-modules)
 
-## [**🌍⇒docs/articles/node-env-variables🗺️**](https://bgoonz-blog.netlify.app/docs/articles/node-env-variables)
+### [**🌍⇒docs/articles/node-env-variables🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/node-env-variables)
 
-## [**🌍⇒docs/articles/node-js-language🗺️**](https://bgoonz-blog.netlify.app/docs/articles/node-js-language)
+### [**🌍⇒docs/articles/node-js-language🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/node-js-language)
 
-## [**🌍⇒docs/articles/node-package-manager🗺️**](https://bgoonz-blog.netlify.app/docs/articles/node-package-manager)
+### [**🌍⇒docs/articles/node-package-manager🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/node-package-manager)
 
-## [**🌍⇒docs/articles/node-repl🗺️**](https://bgoonz-blog.netlify.app/docs/articles/node-repl)
+### [**🌍⇒docs/articles/node-repl🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/node-repl)
 
-## [**🌍⇒docs/articles/node-run-cli🗺️**](https://bgoonz-blog.netlify.app/docs/articles/node-run-cli)
+### [**🌍⇒docs/articles/node-run-cli🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/node-run-cli)
 
-## [**🌍⇒docs/articles/nodejs🗺️**](https://bgoonz-blog.netlify.app/docs/articles/nodejs)
+### [**🌍⇒docs/articles/nodejs🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/nodejs)
 
-## [**🌍⇒docs/articles/nodevsbrowser🗺️**](https://bgoonz-blog.netlify.app/docs/articles/nodevsbrowser)
+### [**🌍⇒docs/articles/nodevsbrowser🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/nodevsbrowser)
 
-## [**🌍⇒docs/articles/npm🗺️**](https://bgoonz-blog.netlify.app/docs/articles/npm)
+### [**🌍⇒docs/articles/npm🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/npm)
 
-## [**🌍⇒docs/articles/npx🗺️**](https://bgoonz-blog.netlify.app/docs/articles/npx)
+### [**🌍⇒docs/articles/npx🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/npx)
 
-## [**🌍⇒docs/articles/os-module🗺️**](https://bgoonz-blog.netlify.app/docs/articles/os-module)
+### [**🌍⇒docs/articles/os-module🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/os-module)
 
-## [**🌍⇒docs/articles/package-lock🗺️**](https://bgoonz-blog.netlify.app/docs/articles/package-lock)
+### [**🌍⇒docs/articles/package-lock🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/package-lock)
 
-## [**🌍⇒docs/articles/reading-files🗺️**](https://bgoonz-blog.netlify.app/docs/articles/reading-files)
+### [**🌍⇒docs/articles/reading-files🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/reading-files)
 
-## [**🌍⇒docs/articles/semantic🗺️**](https://bgoonz-blog.netlify.app/docs/articles/semantic)
+### [**🌍⇒docs/articles/semantic🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/semantic)
 
-## [**🌍⇒docs/articles/semantic-html🗺️**](https://bgoonz-blog.netlify.app/docs/articles/semantic-html)
+### [**🌍⇒docs/articles/semantic-html🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/semantic-html)
 
-## [**🌍⇒docs/articles/the-uniform-resource-locator-(url)🗺️**](<https://bgoonz-blog.netlify.app/docs/articles/the-uniform-resource-locator-(url)>)
+### [**🌍⇒docs/articles/the-uniform-resource-locator-(url)🗺️**](<https://blogcmsbgoonz.netlify.app/docs/articles/the-uniform-resource-locator-(url)>)
 
-## [**🌍⇒docs/articles/understanding-firebase🗺️**](https://bgoonz-blog.netlify.app/docs/articles/understanding-firebase)
+### [**🌍⇒docs/articles/understanding-firebase🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/understanding-firebase)
 
-## [**🌍⇒docs/articles/v8🗺️**](https://bgoonz-blog.netlify.app/docs/articles/v8)
+### [**🌍⇒docs/articles/v8🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/v8)
 
-## [**🌍⇒docs/articles/web-standards-checklist🗺️**](https://bgoonz-blog.netlify.app/docs/articles/web-standards-checklist)
+### [**🌍⇒docs/articles/web-standards-checklist🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/web-standards-checklist)
 
-## [**🌍⇒docs/articles/webdev-tools🗺️**](https://bgoonz-blog.netlify.app/docs/articles/webdev-tools)
+### [**🌍⇒docs/articles/webdev-tools🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/webdev-tools)
 
-## [**🌍⇒docs/articles/write-2-json-with-python🗺️**](https://bgoonz-blog.netlify.app/docs/articles/write-2-json-with-python)
+### [**🌍⇒docs/articles/write-2-json-with-python🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/write-2-json-with-python)
 
-## [**🌍⇒docs/articles/writing-files🗺️**](https://bgoonz-blog.netlify.app/docs/articles/writing-files)
+### [**🌍⇒docs/articles/writing-files🗺️**](https://blogcmsbgoonz.netlify.app/docs/articles/writing-files)
 
-## [**🌍⇒docs/audio/audio🗺️**](https://bgoonz-blog.netlify.app/docs/audio/audio)
+### [**🌍⇒docs/audio/audio🗺️**](https://blogcmsbgoonz.netlify.app/docs/audio/audio)
 
-## [**🌍⇒docs/audio/audio-feature-extraction🗺️**](https://bgoonz-blog.netlify.app/docs/audio/audio-feature-extraction)
+### [**🌍⇒docs/audio/audio-feature-extraction🗺️**](https://blogcmsbgoonz.netlify.app/docs/audio/audio-feature-extraction)
 
-## [**🌍⇒docs/audio/dfft🗺️**](https://bgoonz-blog.netlify.app/docs/audio/dfft)
+### [**🌍⇒docs/audio/dfft🗺️**](https://blogcmsbgoonz.netlify.app/docs/audio/dfft)
 
-## [**🌍⇒docs/audio/discrete-fft🗺️**](https://bgoonz-blog.netlify.app/docs/audio/discrete-fft)
+### [**🌍⇒docs/audio/discrete-fft🗺️**](https://blogcmsbgoonz.netlify.app/docs/audio/discrete-fft)
 
-## [**🌍⇒docs/audio/dtw-python-explained🗺️**](https://bgoonz-blog.netlify.app/docs/audio/dtw-python-explained)
+### [**🌍⇒docs/audio/dtw-python-explained🗺️**](https://blogcmsbgoonz.netlify.app/docs/audio/dtw-python-explained)
 
-## [**🌍⇒docs/audio/dynamic-time-warping🗺️**](https://bgoonz-blog.netlify.app/docs/audio/dynamic-time-warping)
+### [**🌍⇒docs/audio/dynamic-time-warping🗺️**](https://blogcmsbgoonz.netlify.app/docs/audio/dynamic-time-warping)
 
-## [**🌍⇒docs/audio/web-audio-api🗺️**](https://bgoonz-blog.netlify.app/docs/audio/web-audio-api)
+### [**🌍⇒docs/audio/web-audio-api🗺️**](https://blogcmsbgoonz.netlify.app/docs/audio/web-audio-api)
 
-## [**🌍⇒docs/career/confidence🗺️**](https://bgoonz-blog.netlify.app/docs/career/confidence)
+### [**🌍⇒docs/career/confidence🗺️**](https://blogcmsbgoonz.netlify.app/docs/career/confidence)
 
-## [**🌍⇒docs/career/dev-interview🗺️**](https://bgoonz-blog.netlify.app/docs/career/dev-interview)
+### [**🌍⇒docs/career/dev-interview🗺️**](https://blogcmsbgoonz.netlify.app/docs/career/dev-interview)
 
-## [**🌍⇒docs/career/interview-dos-n-donts🗺️**](https://bgoonz-blog.netlify.app/docs/career/interview-dos-n-donts)
+### [**🌍⇒docs/career/interview-dos-n-donts🗺️**](https://blogcmsbgoonz.netlify.app/docs/career/interview-dos-n-donts)
 
-## [**🌍⇒docs/career/job-boards🗺️**](https://bgoonz-blog.netlify.app/docs/career/job-boards)
+### [**🌍⇒docs/career/job-boards🗺️**](https://blogcmsbgoonz.netlify.app/docs/career/job-boards)
 
-## [**🌍⇒docs/community/an-open-letter-2-future-developers🗺️**](https://bgoonz-blog.netlify.app/docs/community/an-open-letter-2-future-developers)
+### [**🌍⇒docs/community/an-open-letter-2-future-developers🗺️**](https://blogcmsbgoonz.netlify.app/docs/community/an-open-letter-2-future-developers)
 
-## [**🌍⇒docs/community/video-chat🗺️**](https://bgoonz-blog.netlify.app/docs/community/video-chat)
+### [**🌍⇒docs/community/video-chat🗺️**](https://blogcmsbgoonz.netlify.app/docs/community/video-chat)
 
-## [**🌍⇒docs/content/algo🗺️**](https://bgoonz-blog.netlify.app/docs/content/algo)
+### [**🌍⇒docs/content/algo🗺️**](https://blogcmsbgoonz.netlify.app/docs/content/algo)
 
-## [**🌍⇒docs/content/archive🗺️**](https://bgoonz-blog.netlify.app/docs/content/archive)
+### [**🌍⇒docs/content/archive🗺️**](https://blogcmsbgoonz.netlify.app/docs/content/archive)
 
-## [**🌍⇒docs/content/data-structures-algo🗺️**](https://bgoonz-blog.netlify.app/docs/content/data-structures-algo)
+### [**🌍⇒docs/content/data-structures-algo🗺️**](https://blogcmsbgoonz.netlify.app/docs/content/data-structures-algo)
 
-## [**🌍⇒docs/content/gatsby-Queries-Mutations🗺️**](https://bgoonz-blog.netlify.app/docs/content/gatsby-Queries-Mutations)
+### [**🌍⇒docs/content/gatsby-Queries-Mutations🗺️**](https://blogcmsbgoonz.netlify.app/docs/content/gatsby-Queries-Mutations)
 
-## [**🌍⇒docs/content/history-api🗺️**](https://bgoonz-blog.netlify.app/docs/content/history-api)
+### [**🌍⇒docs/content/history-api🗺️**](https://blogcmsbgoonz.netlify.app/docs/content/history-api)
 
-## [**🌍⇒docs/content/projects🗺️**](https://bgoonz-blog.netlify.app/docs/content/projects)
+### [**🌍⇒docs/content/projects🗺️**](https://blogcmsbgoonz.netlify.app/docs/content/projects)
 
-## [**🌍⇒docs/content/recent-projects🗺️**](https://bgoonz-blog.netlify.app/docs/content/recent-projects)
+### [**🌍⇒docs/content/recent-projects🗺️**](https://blogcmsbgoonz.netlify.app/docs/content/recent-projects)
 
-## [**🌍⇒docs/content/trouble-shooting🗺️**](https://bgoonz-blog.netlify.app/docs/content/trouble-shooting)
+### [**🌍⇒docs/content/trouble-shooting🗺️**](https://blogcmsbgoonz.netlify.app/docs/content/trouble-shooting)
 
-## [**🌍⇒docs/docs/appendix🗺️**](https://bgoonz-blog.netlify.app/docs/docs/appendix)
+### [**🌍⇒docs/docs/appendix🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/appendix)
 
-## [**🌍⇒docs/docs/bash🗺️**](https://bgoonz-blog.netlify.app/docs/docs/bash)
+### [**🌍⇒docs/docs/bash🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/bash)
 
-## [**🌍⇒docs/docs/content🗺️**](https://bgoonz-blog.netlify.app/docs/docs/content)
+### [**🌍⇒docs/docs/content🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/content)
 
-## [**🌍⇒docs/docs/css🗺️**](https://bgoonz-blog.netlify.app/docs/docs/css)
+### [**🌍⇒docs/docs/css🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/css)
 
-## [**🌍⇒docs/docs/data-structures-docs🗺️**](https://bgoonz-blog.netlify.app/docs/docs/data-structures-docs)
+### [**🌍⇒docs/docs/data-structures-docs🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/data-structures-docs)
 
-## [**🌍⇒docs/docs/git-reference🗺️**](https://bgoonz-blog.netlify.app/docs/docs/git-reference)
+### [**🌍⇒docs/docs/git-reference🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/git-reference)
 
-## [**🌍⇒docs/docs/git-repos🗺️**](https://bgoonz-blog.netlify.app/docs/docs/git-repos)
+### [**🌍⇒docs/docs/git-repos🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/git-repos)
 
-## [**🌍⇒docs/docs/html-spec🗺️**](https://bgoonz-blog.netlify.app/docs/docs/html-spec)
+### [**🌍⇒docs/docs/html-spec🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/html-spec)
 
-## [**🌍⇒docs/docs/markdown🗺️**](https://bgoonz-blog.netlify.app/docs/docs/markdown)
+### [**🌍⇒docs/docs/markdown🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/markdown)
 
-## [**🌍⇒docs/docs/no-whiteboarding🗺️**](https://bgoonz-blog.netlify.app/docs/docs/no-whiteboarding)
+### [**🌍⇒docs/docs/no-whiteboarding🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/no-whiteboarding)
 
-## [**🌍⇒docs/docs/node-docs-complete🗺️**](https://bgoonz-blog.netlify.app/docs/docs/node-docs-complete)
+### [**🌍⇒docs/docs/node-docs-complete🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/node-docs-complete)
 
-## [**🌍⇒docs/docs/node-docs-full🗺️**](https://bgoonz-blog.netlify.app/docs/docs/node-docs-full)
+### [**🌍⇒docs/docs/node-docs-full🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/node-docs-full)
 
-## [**🌍⇒docs/docs/regex-in-js🗺️**](https://bgoonz-blog.netlify.app/docs/docs/regex-in-js)
+### [**🌍⇒docs/docs/regex-in-js🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/regex-in-js)
 
-## [**🌍⇒docs/docs/sitemap🗺️**](https://bgoonz-blog.netlify.app/docs/docs/sitemap)
+### [**🌍⇒docs/docs/sitemap🗺️**](https://blogcmsbgoonz.netlify.app/docs/docs/sitemap)
 
-## [**🌍⇒docs/faq/contact🗺️**](https://bgoonz-blog.netlify.app/docs/faq/contact)
+### [**🌍⇒docs/faq/contact🗺️**](https://blogcmsbgoonz.netlify.app/docs/faq/contact)
 
-## [**🌍⇒docs/faq/plug-ins🗺️**](https://bgoonz-blog.netlify.app/docs/faq/plug-ins)
+### [**🌍⇒docs/faq/plug-ins🗺️**](https://blogcmsbgoonz.netlify.app/docs/faq/plug-ins)
 
-## [**🌍⇒docs/interact/callstack-visual🗺️**](https://bgoonz-blog.netlify.app/docs/interact/callstack-visual)
+### [**🌍⇒docs/interact/callstack-visual🗺️**](https://blogcmsbgoonz.netlify.app/docs/interact/callstack-visual)
 
-## [**🌍⇒docs/interact/clock🗺️**](https://bgoonz-blog.netlify.app/docs/interact/clock)
+### [**🌍⇒docs/interact/clock🗺️**](https://blogcmsbgoonz.netlify.app/docs/interact/clock)
 
-## [**🌍⇒docs/interact/jupyter-notebooks🗺️**](https://bgoonz-blog.netlify.app/docs/interact/jupyter-notebooks)
+### [**🌍⇒docs/interact/jupyter-notebooks🗺️**](https://blogcmsbgoonz.netlify.app/docs/interact/jupyter-notebooks)
 
-## [**🌍⇒docs/interact/other-sites🗺️**](https://bgoonz-blog.netlify.app/docs/interact/other-sites)
+### [**🌍⇒docs/interact/other-sites🗺️**](https://blogcmsbgoonz.netlify.app/docs/interact/other-sites)
 
-## [**🌍⇒docs/interact/video-chat🗺️**](https://bgoonz-blog.netlify.app/docs/interact/video-chat)
+### [**🌍⇒docs/interact/video-chat🗺️**](https://blogcmsbgoonz.netlify.app/docs/interact/video-chat)
 
-## [**🌍⇒docs/javascript/arrow-functions🗺️**](https://bgoonz-blog.netlify.app/docs/javascript/arrow-functions)
+### [**🌍⇒docs/javascript/arrow-functions🗺️**](https://blogcmsbgoonz.netlify.app/docs/javascript/arrow-functions)
 
-## [**🌍⇒docs/javascript/await-keyword🗺️**](https://bgoonz-blog.netlify.app/docs/javascript/await-keyword)
+### [**🌍⇒docs/javascript/await-keyword🗺️**](https://blogcmsbgoonz.netlify.app/docs/javascript/await-keyword)
 
-## [**🌍⇒docs/javascript/bigo🗺️**](https://bgoonz-blog.netlify.app/docs/javascript/bigo)
+### [**🌍⇒docs/javascript/bigo🗺️**](https://blogcmsbgoonz.netlify.app/docs/javascript/bigo)
 
-## [**🌍⇒docs/javascript/clean-code🗺️**](https://bgoonz-blog.netlify.app/docs/javascript/clean-code)
+### [**🌍⇒docs/javascript/clean-code🗺️**](https://blogcmsbgoonz.netlify.app/docs/javascript/clean-code)
 
-## [**🌍⇒docs/javascript/constructor-functions🗺️**](https://bgoonz-blog.netlify.app/docs/javascript/constructor-functions)
+### [**🌍⇒docs/javascript/constructor-functions🗺️**](https://blogcmsbgoonz.netlify.app/docs/javascript/constructor-functions)
 
-## [**🌍⇒docs/javascript/promises🗺️**](https://bgoonz-blog.netlify.app/docs/javascript/promises)
+### [**🌍⇒docs/javascript/promises🗺️**](https://blogcmsbgoonz.netlify.app/docs/javascript/promises)
 
-## [**🌍⇒docs/javascript/review🗺️**](https://bgoonz-blog.netlify.app/docs/javascript/review)
+### [**🌍⇒docs/javascript/review🗺️**](https://blogcmsbgoonz.netlify.app/docs/javascript/review)
 
-## [**🌍⇒docs/javascript/this-is-about-this🗺️**](https://bgoonz-blog.netlify.app/docs/javascript/this-is-about-this)
+### [**🌍⇒docs/javascript/this-is-about-this🗺️**](https://blogcmsbgoonz.netlify.app/docs/javascript/this-is-about-this)
 
-## [**🌍⇒docs/projects/medium-links🗺️**](https://bgoonz-blog.netlify.app/docs/projects/medium-links)
+### [**🌍⇒docs/projects/medium-links🗺️**](https://blogcmsbgoonz.netlify.app/docs/projects/medium-links)
 
-## [**🌍⇒docs/projects/my-websites🗺️**](https://bgoonz-blog.netlify.app/docs/projects/my-websites)
+### [**🌍⇒docs/projects/my-websites🗺️**](https://blogcmsbgoonz.netlify.app/docs/projects/my-websites)
 
-## [**🌍⇒docs/python/at-length🗺️**](https://bgoonz-blog.netlify.app/docs/python/at-length)
+### [**🌍⇒docs/python/at-length🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/at-length)
 
-## [**🌍⇒docs/python/basics🗺️**](https://bgoonz-blog.netlify.app/docs/python/basics)
+### [**🌍⇒docs/python/basics🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/basics)
 
-## [**🌍⇒docs/python/cheat-sheet🗺️**](https://bgoonz-blog.netlify.app/docs/python/cheat-sheet)
+### [**🌍⇒docs/python/cheat-sheet🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/cheat-sheet)
 
-## [**🌍⇒docs/python/comprehensive-guide🗺️**](https://bgoonz-blog.netlify.app/docs/python/comprehensive-guide)
+### [**🌍⇒docs/python/comprehensive-guide🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/comprehensive-guide)
 
-## [**🌍⇒docs/python/examples🗺️**](https://bgoonz-blog.netlify.app/docs/python/examples)
+### [**🌍⇒docs/python/examples🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/examples)
 
-## [**🌍⇒docs/python/flow-control🗺️**](https://bgoonz-blog.netlify.app/docs/python/flow-control)
+### [**🌍⇒docs/python/flow-control🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/flow-control)
 
-## [**🌍⇒docs/python/functions🗺️**](https://bgoonz-blog.netlify.app/docs/python/functions)
+### [**🌍⇒docs/python/functions🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/functions)
 
-## [**🌍⇒docs/python/google-sheets-api🗺️**](https://bgoonz-blog.netlify.app/docs/python/google-sheets-api)
+### [**🌍⇒docs/python/google-sheets-api🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/google-sheets-api)
 
-## [**🌍⇒docs/python/intro-for-js-devs🗺️**](https://bgoonz-blog.netlify.app/docs/python/intro-for-js-devs)
+### [**🌍⇒docs/python/intro-for-js-devs🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/intro-for-js-devs)
 
-## [**🌍⇒docs/python/python-ds🗺️**](https://bgoonz-blog.netlify.app/docs/python/python-ds)
+### [**🌍⇒docs/python/python-ds🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/python-ds)
 
-## [**🌍⇒docs/python/snippets🗺️**](https://bgoonz-blog.netlify.app/docs/python/snippets)
+### [**🌍⇒docs/python/snippets🗺️**](https://blogcmsbgoonz.netlify.app/docs/python/snippets)
 
-## [**🌍⇒docs/quick-reference/Emmet🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/Emmet)
+### [**🌍⇒docs/quick-reference/Emmet🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/Emmet)
 
-## [**🌍⇒docs/quick-reference/all-emojis🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/all-emojis)
+### [**🌍⇒docs/quick-reference/all-emojis🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/all-emojis)
 
-## [**🌍⇒docs/quick-reference/create-react-app🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/create-react-app)
+### [**🌍⇒docs/quick-reference/create-react-app🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/create-react-app)
 
-## [**🌍⇒docs/quick-reference/git-bash🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/git-bash)
+### [**🌍⇒docs/quick-reference/git-bash🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/git-bash)
 
-## [**🌍⇒docs/quick-reference/git-tricks🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/git-tricks)
+### [**🌍⇒docs/quick-reference/git-tricks🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/git-tricks)
 
-## [**🌍⇒docs/quick-reference/google-firebase🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/google-firebase)
+### [**🌍⇒docs/quick-reference/google-firebase🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/google-firebase)
 
-## [**🌍⇒docs/quick-reference/heroku-error-codes🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/heroku-error-codes)
+### [**🌍⇒docs/quick-reference/heroku-error-codes🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/heroku-error-codes)
 
-## [**🌍⇒docs/quick-reference/installation🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/installation)
+### [**🌍⇒docs/quick-reference/installation🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/installation)
 
-## [**🌍⇒docs/quick-reference/markdown-dropdowns🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/markdown-dropdowns)
+### [**🌍⇒docs/quick-reference/markdown-dropdowns🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/markdown-dropdowns)
 
-## [**🌍⇒docs/quick-reference/minifiction🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/minifiction)
+### [**🌍⇒docs/quick-reference/minifiction🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/minifiction)
 
-## [**🌍⇒docs/quick-reference/new-repo-instructions🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/new-repo-instructions)
+### [**🌍⇒docs/quick-reference/new-repo-instructions🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/new-repo-instructions)
 
-## [**🌍⇒docs/quick-reference/psql-setup🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/psql-setup)
+### [**🌍⇒docs/quick-reference/psql-setup🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/psql-setup)
 
-## [**🌍⇒docs/quick-reference/pull-request-rubric🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/pull-request-rubric)
+### [**🌍⇒docs/quick-reference/pull-request-rubric🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/pull-request-rubric)
 
-## [**🌍⇒docs/quick-reference/quick-links🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/quick-links)
+### [**🌍⇒docs/quick-reference/quick-links🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/quick-links)
 
-## [**🌍⇒docs/quick-reference/topRepos🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/topRepos)
+### [**🌍⇒docs/quick-reference/topRepos🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/topRepos)
 
-## [**🌍⇒docs/quick-reference/understanding-path🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/understanding-path)
+### [**🌍⇒docs/quick-reference/understanding-path🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/understanding-path)
 
-## [**🌍⇒docs/quick-reference/vscode-themes🗺️**](https://bgoonz-blog.netlify.app/docs/quick-reference/vscode-themes)
+### [**🌍⇒docs/quick-reference/vscode-themes🗺️**](https://blogcmsbgoonz.netlify.app/docs/quick-reference/vscode-themes)
 
-## [**🌍⇒docs/react/cheatsheet🗺️**](https://bgoonz-blog.netlify.app/docs/react/cheatsheet)
+### [**🌍⇒docs/react/cheatsheet🗺️**](https://blogcmsbgoonz.netlify.app/docs/react/cheatsheet)
 
-## [**🌍⇒docs/react/createReactApp🗺️**](https://bgoonz-blog.netlify.app/docs/react/createReactApp)
+### [**🌍⇒docs/react/createReactApp🗺️**](https://blogcmsbgoonz.netlify.app/docs/react/createReactApp)
 
-## [**🌍⇒docs/react/demo🗺️**](https://bgoonz-blog.netlify.app/docs/react/demo)
+### [**🌍⇒docs/react/demo🗺️**](https://blogcmsbgoonz.netlify.app/docs/react/demo)
 
-## [**🌍⇒docs/react/jsx🗺️**](https://bgoonz-blog.netlify.app/docs/react/jsx)
+### [**🌍⇒docs/react/jsx🗺️**](https://blogcmsbgoonz.netlify.app/docs/react/jsx)
 
-## [**🌍⇒docs/react/react-docs🗺️**](https://bgoonz-blog.netlify.app/docs/react/react-docs)
+### [**🌍⇒docs/react/react-docs🗺️**](https://blogcmsbgoonz.netlify.app/docs/react/react-docs)
 
-## [**🌍⇒docs/react/react-in-depth🗺️**](https://bgoonz-blog.netlify.app/docs/react/react-in-depth)
+### [**🌍⇒docs/react/react-in-depth🗺️**](https://blogcmsbgoonz.netlify.app/docs/react/react-in-depth)
 
-## [**🌍⇒docs/react/react2🗺️**](https://bgoonz-blog.netlify.app/docs/react/react2)
+### [**🌍⇒docs/react/react2🗺️**](https://blogcmsbgoonz.netlify.app/docs/react/react2)
 
-## [**🌍⇒docs/react/render-elements🗺️**](https://bgoonz-blog.netlify.app/docs/react/render-elements)
+### [**🌍⇒docs/react/render-elements🗺️**](https://blogcmsbgoonz.netlify.app/docs/react/render-elements)
 
-## [**🌍⇒docs/reference/awesome-lists🗺️**](https://bgoonz-blog.netlify.app/docs/reference/awesome-lists)
+### [**🌍⇒docs/reference/awesome-lists🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/awesome-lists)
 
-## [**🌍⇒docs/reference/awesome-static🗺️**](https://bgoonz-blog.netlify.app/docs/reference/awesome-static)
+### [**🌍⇒docs/reference/awesome-static🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/awesome-static)
 
-## [**🌍⇒docs/reference/bookmarks🗺️**](https://bgoonz-blog.netlify.app/docs/reference/bookmarks)
+### [**🌍⇒docs/reference/bookmarks🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/bookmarks)
 
-## [**🌍⇒docs/reference/embed-the-web🗺️**](https://bgoonz-blog.netlify.app/docs/reference/embed-the-web)
+### [**🌍⇒docs/reference/embed-the-web🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/embed-the-web)
 
-## [**🌍⇒docs/reference/github-search🗺️**](https://bgoonz-blog.netlify.app/docs/reference/github-search)
+### [**🌍⇒docs/reference/github-search🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/github-search)
 
-## [**🌍⇒docs/reference/how-2-reinstall-npm🗺️**](https://bgoonz-blog.netlify.app/docs/reference/how-2-reinstall-npm)
+### [**🌍⇒docs/reference/how-2-reinstall-npm🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/how-2-reinstall-npm)
 
-## [**🌍⇒docs/reference/how-to-kill-a-process🗺️**](https://bgoonz-blog.netlify.app/docs/reference/how-to-kill-a-process)
+### [**🌍⇒docs/reference/how-to-kill-a-process🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/how-to-kill-a-process)
 
-## [**🌍⇒docs/reference/installing-node🗺️**](https://bgoonz-blog.netlify.app/docs/reference/installing-node)
+### [**🌍⇒docs/reference/installing-node🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/installing-node)
 
-## [**🌍⇒docs/reference/intro-to-nodejs🗺️**](https://bgoonz-blog.netlify.app/docs/reference/intro-to-nodejs)
+### [**🌍⇒docs/reference/intro-to-nodejs🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/intro-to-nodejs)
 
-## [**🌍⇒docs/reference/notes-template🗺️**](https://bgoonz-blog.netlify.app/docs/reference/notes-template)
+### [**🌍⇒docs/reference/notes-template🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/notes-template)
 
-## [**🌍⇒docs/reference/psql🗺️**](https://bgoonz-blog.netlify.app/docs/reference/psql)
+### [**🌍⇒docs/reference/psql🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/psql)
 
-## [**🌍⇒docs/reference/resources🗺️**](https://bgoonz-blog.netlify.app/docs/reference/resources)
+### [**🌍⇒docs/reference/resources🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/resources)
 
-## [**🌍⇒docs/reference/vscode🗺️**](https://bgoonz-blog.netlify.app/docs/reference/vscode)
+### [**🌍⇒docs/reference/vscode🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/vscode)
 
-## [**🌍⇒docs/reference/web-api's🗺️**](https://bgoonz-blog.netlify.app/docs/reference/web-api's)
+### [**🌍⇒docs/reference/web-api's🗺️**](https://blogcmsbgoonz.netlify.app/docs/reference/web-api's)
 
-## [**🌍⇒docs/tools/data-structures🗺️**](https://bgoonz-blog.netlify.app/docs/tools/data-structures)
+### [**🌍⇒docs/tools/data-structures🗺️**](https://blogcmsbgoonz.netlify.app/docs/tools/data-structures)
 
-## [**🌍⇒docs/tools/dev-utilities🗺️**](https://bgoonz-blog.netlify.app/docs/tools/dev-utilities)
+### [**🌍⇒docs/tools/dev-utilities🗺️**](https://blogcmsbgoonz.netlify.app/docs/tools/dev-utilities)
 
-## [**🌍⇒docs/tools/google-cloud🗺️**](https://bgoonz-blog.netlify.app/docs/tools/google-cloud)
+### [**🌍⇒docs/tools/google-cloud🗺️**](https://blogcmsbgoonz.netlify.app/docs/tools/google-cloud)
 
-## [**🌍⇒docs/tools/markdown-html🗺️**](https://bgoonz-blog.netlify.app/docs/tools/markdown-html)
+### [**🌍⇒docs/tools/markdown-html🗺️**](https://blogcmsbgoonz.netlify.app/docs/tools/markdown-html)
 
-## [**🌍⇒docs/tools/more-tools🗺️**](https://bgoonz-blog.netlify.app/docs/tools/more-tools)
+### [**🌍⇒docs/tools/more-tools🗺️**](https://blogcmsbgoonz.netlify.app/docs/tools/more-tools)
 
-## [**🌍⇒docs/tutorials/google-lighthouse-cli🗺️**](https://bgoonz-blog.netlify.app/docs/tutorials/google-lighthouse-cli)
+### [**🌍⇒docs/tutorials/google-lighthouse-cli🗺️**](https://blogcmsbgoonz.netlify.app/docs/tutorials/google-lighthouse-cli)
 
 </details>
 
@@ -2226,14 +2622,14 @@ find . -name *right.html  -type f -exec sed -i 's/target="_parent"//g' {} +
 
 ---
 
-## 🚀 Quick start
+### 🚀 Quick start
 
 1. **Create a Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying the default starter.
 
     ```shell
-    # create a new Gatsby site using the default starter
+    ## create a new Gatsby site using the default starter
     gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
     ```
 
@@ -2254,7 +2650,7 @@ find . -name *right.html  -type f -exec sed -i 's/target="_parent"//g' {} +
 
     Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-## 🧐 What's inside?
+### 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
@@ -2296,15 +2692,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+### 🎓 Learning Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby**](https://www.gatsbyjs.com/tutorial/).\*\* It starts with zero assumptions about your level of ability and walks through every step of the process.
+-   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby**](https://www.gatsbyjs.com/tutorial/).\*\* It starts with zero assumptions about your level of ability and walks through every step of the process.
 -
-- **To dive straight into code samples, head [to our documentation**](https://www.gatsbyjs.com/docs/).\*\* In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+-   **To dive straight into code samples, head [to our documentation**](https://www.gatsbyjs.com/docs/).\*\* In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
+### 💫 Deploy
 
 [![Deploy to Netlify**](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/BGOONZ_BLOG_2.0.git)
 
@@ -2314,9 +2710,9 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ---
 
-# Gatsby Project Structure | Gatsby
+## Gatsby Project Structure | Gatsby
 
-> ## Excerpt
+> ### Excerpt
 >
 > Inside a Gatsby project, you may see some or all of the following folders and files: Folders /.cache Automatically generated. This folder…
 
@@ -2328,36 +2724,36 @@ Inside a Gatsby project, you may see some or all of the following folders and fi
 /|-- /.cache|-- /plugins|-- /public|-- /src    |-- /api    |-- /pages    |-- /templates    |-- html.js|-- /static|-- gatsby-config.js|-- gatsby-node.js|-- gatsby-ssr.js|-- gatsby-browser.js
 ```
 
-## [](https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/#folders)Folders
+### [](https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/#folders)Folders
 
-- **`/.cache`** _Automatically generated._ This folder is an internal cache created automatically by Gatsby. The files inside this folder are not meant for modification. Should be added to the `.gitignore` file if not added already.
-- **`/plugins`** This folder hosts any project-specific ("local") plugins that aren't published as an `npm` package. Check out the [plugin docs](https://www.gatsbyjs.com/docs/plugins/) for more detail.
-- **`/public`** _Automatically generated._ The output of the build process will be exposed inside this folder. Should be added to the `.gitignore` file if not added already.
-- **`/src`** This directory will contain all of the code related to what you will see on the frontend of your site (what you see in the browser), like your site header, or a page template. "src" is a convention for "source code".
+-   **`/.cache`** _Automatically generated._ This folder is an internal cache created automatically by Gatsby. The files inside this folder are not meant for modification. Should be added to the `.gitignore` file if not added already.
+-   **`/plugins`** This folder hosts any project-specific ("local") plugins that aren't published as an `npm` package. Check out the [plugin docs](https://www.gatsbyjs.com/docs/plugins/) for more detail.
+-   **`/public`** _Automatically generated._ The output of the build process will be exposed inside this folder. Should be added to the `.gitignore` file if not added already.
+-   **`/src`** This directory will contain all of the code related to what you will see on the frontend of your site (what you see in the browser), like your site header, or a page template. "src" is a convention for "source code".
 
-    - **`/api`** JavaScript and TypeScript files under `src/api` become functions automatically with paths based on their file name. Check out the [functions guide](https://www.gatsbyjs.com/docs/reference/functions/) for more detail.
-    - **`/pages`** Components under `src/pages` become pages automatically with paths based on their file name. Check out the [pages recipes](https://www.gatsbyjs.com/docs/recipes/pages-layouts) for more detail.
-    - **`/templates`** Contains templates for programmatically creating pages. Check out the [templates docs](https://www.gatsbyjs.com/docs/conceptual/building-with-components/#page-template-components) for more detail.
-    - **`html.js`** For custom configuration of default `.cache/default_html.js`. Check out the [custom HTML docs](https://www.gatsbyjs.com/docs/custom-html/) for more detail.
+    -   **`/api`** JavaScript and TypeScript files under `src/api` become functions automatically with paths based on their file name. Check out the [functions guide](https://www.gatsbyjs.com/docs/reference/functions/) for more detail.
+    -   **`/pages`** Components under `src/pages` become pages automatically with paths based on their file name. Check out the [pages recipes](https://www.gatsbyjs.com/docs/recipes/pages-layouts) for more detail.
+    -   **`/templates`** Contains templates for programmatically creating pages. Check out the [templates docs](https://www.gatsbyjs.com/docs/conceptual/building-with-components/#page-template-components) for more detail.
+    -   **`html.js`** For custom configuration of default `.cache/default_html.js`. Check out the [custom HTML docs](https://www.gatsbyjs.com/docs/custom-html/) for more detail.
 
-- **`/static`** If you put a file into the static folder, it will not be processed by webpack. Instead it will be copied into the public folder untouched. Check out the [assets docs](https://www.gatsbyjs.com/docs/how-to/images-and-media/static-folder/#adding-assets-outside-of-the-module-system) for more detail.
+-   **`/static`** If you put a file into the static folder, it will not be processed by webpack. Instead it will be copied into the public folder untouched. Check out the [assets docs](https://www.gatsbyjs.com/docs/how-to/images-and-media/static-folder/#adding-assets-outside-of-the-module-system) for more detail.
 
-## [](https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/#files)Files
+### [](https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/#files)Files
 
-- **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-- **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you'd like to include, etc. Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail.
-- **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-- **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+-   **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+-   **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you'd like to include, etc. Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail.
+-   **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+-   **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-## [](https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/#miscellaneous)Miscellaneous
+### [](https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/#miscellaneous)Miscellaneous
 
 The file/folder structure described above reflects Gatsby-specific files and folders. Since Gatsby sites are also React apps, it's common to use standard React code organization patterns such as folders like `/components` and `/utils` inside `/src`. The [React docs](https://reactjs.org/docs/faq-structure.html) have more information on a typical React app folder structure.
 
 ---
 
-# Layout Components | Gatsby
+## Layout Components | Gatsby
 
-> ## Excerpt
+> ### Excerpt
 >
 > In this guide, you'll learn Gatsby's approach to layouts, how to create and use layout components, and how to prevent layout components from…
 
@@ -2365,15 +2761,15 @@ The file/folder structure described above reflects Gatsby-specific files and fol
 
 In this guide, you'll learn Gatsby's approach to layouts, how to create and use layout components, and how to prevent layout components from unmounting.
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#gatsbys-approach-to-layouts)Gatsby's approach to layouts
+### [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#gatsbys-approach-to-layouts)Gatsby's approach to layouts
 
 Gatsby does not, by default, automatically apply layouts to pages (there are, however, ways to do so which will be covered in a later section). Instead, Gatsby follows React's compositional model of importing and using components. This makes it possible to create multiple levels of layouts, e.g. a global header and footer, and then on some pages, a sidebar menu. It also makes it possible to pass data between layout and page components.
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#what-are-layout-components)What are layout components?
+### [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#what-are-layout-components)What are layout components?
 
 Layout components are for sections of your site that you want to share across multiple pages. For example, Gatsby sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and/or navigation menu. On this page for example, the header at the top is part of gatsbyjs.com's layout component.
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-create-layout-components)How to create layout components
+### [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-create-layout-components)How to create layout components
 
 It is recommended to create your layout components alongside the rest of your components (e.g. into `src/components/`).
 
@@ -2383,7 +2779,7 @@ Here is an example of a very basic layout component at `src/components/layout.js
 import React from "react"export default function Layout({ children }) {  return (    <div style={{ margin: `0 auto`, maxWidth: 650, padding: `0 1rem` }}>       {children}    </div>   )}
 ```
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-import-and-add-layout-components-to-pages)How to import and add layout components to pages
+### [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-import-and-add-layout-components-to-pages)How to import and add layout components to pages
 
 If you want to apply a layout to a page, you will need to include the `Layout` component and wrap your page in it. For example, here is how you would apply your layout to the front page:
 
@@ -2393,7 +2789,7 @@ import React from "react"import Layout from "../components/layout"export default
 
 Repeat for every page and template that needs this layout.
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-prevent-layout-components-from-unmounting)How to prevent layout components from unmounting
+### [](https://www.gatsbyjs.com/docs/how-to/routing/layout-components/#how-to-prevent-layout-components-from-unmounting)How to prevent layout components from unmounting
 
 As mentioned earlier, Gatsby does not, by default, automatically wrap pages in a layout component. The "top level" component is the page itself. As a result, when the "top level" component changes between pages, React will re-render all children. This means that shared components like navigations will unmount and remount. This will break CSS transitions or React state within those shared components.
 
@@ -2401,9 +2797,9 @@ If you need to set a wrapper component around page components that won't get unm
 
 Alternatively, you can prevent your layout component from unmounting by using [gatsby-plugin-layout](https://www.gatsbyjs.com/plugins/gatsby-plugin-layout/), which implements the `wrapPageElement` APIs for you.
 
-# Adding Markdown Pages | Gatsby
+## Adding Markdown Pages | Gatsby
 
-> ## Excerpt
+> ### Excerpt
 >
 > Gatsby can use Markdown files to create pages in your site.
 > You add plugins to read and understand folders with Markdown files and from them…
@@ -2419,15 +2815,15 @@ Here are the steps Gatsby follows for making this happen.
 3. Add a Markdown file
 4. Create a Collection Route component for the Markdown files
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#read-files-into-gatsby-from-the-filesystem)Read files into Gatsby from the filesystem
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#read-files-into-gatsby-from-the-filesystem)Read files into Gatsby from the filesystem
 
 Use the plugin [`gatsby-source-filesystem`](https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/#gatsby-source-filesystem) to read files.
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#install)Install
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#install)Install
 
 `npm install gatsby-source-filesystem`
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#add-plugin)Add plugin
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#add-plugin)Add plugin
 
 Open `gatsby-config.js` to add the `gatsby-source-filesystem` plugin. The `path` option is how you set the directory to search for files.
 
@@ -2437,15 +2833,15 @@ module.exports = {  siteMetadata: {    title: "My Gatsby Site",  },  plugins: [ 
 
 Completing the above step means that you've "sourced" the Markdown files from the filesystem. You can now "transform" the Markdown to HTML and the YAML frontmatter to JSON.
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#transform-markdown-to-html-and-frontmatter-to-data-using-gatsby-transformer-remark)Transform Markdown to HTML and frontmatter to data using `gatsby-transformer-remark`
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#transform-markdown-to-html-and-frontmatter-to-data-using-gatsby-transformer-remark)Transform Markdown to HTML and frontmatter to data using `gatsby-transformer-remark`
 
 You'll use the plugin [`gatsby-transformer-remark`](https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/) to recognize files which are Markdown and read their content. The plugin will convert the frontmatter metadata part of your Markdown files as `frontmatter` and the content part as HTML.
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#install-transformer-plugin)Install transformer plugin
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#install-transformer-plugin)Install transformer plugin
 
 `npm install gatsby-transformer-remark`
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#configure-plugin)Configure plugin
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#configure-plugin)Configure plugin
 
 Add this to `gatsby-config.js` after the previously added `gatsby-source-filesystem`.
 
@@ -2453,11 +2849,11 @@ Add this to `gatsby-config.js` after the previously added `gatsby-source-filesys
 module.exports = {  siteMetadata: {    title: "My Gatsby Site",  },  plugins: [    {      resolve: `gatsby-source-filesystem`,      options: {        name: `markdown-pages`,        path: `${__dirname}/src/markdown-pages`,      },    },    `gatsby-transformer-remark`,  ],}
 ```
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#add-a-markdown-file)Add a Markdown file
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#add-a-markdown-file)Add a Markdown file
 
 Create a folder in the `/src` directory of your Gatsby application called `markdown-pages`. Now create a Markdown file inside it with the name `post-1.md`.
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#frontmatter-for-metadata-in-markdown-files)Frontmatter for metadata in Markdown files
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#frontmatter-for-metadata-in-markdown-files)Frontmatter for metadata in Markdown files
 
 When you create a Markdown file, you can include a set of key/value pairs that can be used to provide additional data relevant to specific pages in the GraphQL data layer. This data is called "frontmatter" and is denoted by the triple dashes at the start and end of the block. This block will be parsed by `gatsby-transformer-remark` as YAML. You can then query the data through the GraphQL API from your React components.
 
@@ -2469,7 +2865,7 @@ src/markdown-pages/post-1.md
 
 What is important in this step is the key pair `slug`. The value that is assigned to the key `slug` is used in order to navigate to your post.
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#create-a-collection-route-for-the-markdown-files)Create a Collection Route for the Markdown files
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#create-a-collection-route-for-the-markdown-files)Create a Collection Route for the Markdown files
 
 Create `src/pages/{MarkdownRemark.frontmatter__slug}.js` and add the following code:
 
@@ -2493,19 +2889,19 @@ This should get you started on some basic Markdown functionality in your Gatsby 
 
 For more information, have a look in the working example `using-markdown-pages`. You can find it in the [Gatsby examples section](https://github.com/gatsbyjs/gatsby/tree/master/examples).
 
-## [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#other-tutorials)Other tutorials
+### [](https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/#other-tutorials)Other tutorials
 
 </details>
 
 ---
 
-# Technoloy
+## Technoloy
 
 ![tech-stack](https://github.com/bgoonz/BGOONZ_BLOG_2.0/blob/master/static/images/madewith.png?raw=true)
 
 ---
 
-# SOURCECODE
+## SOURCECODE
 
 ```
 
@@ -2658,7 +3054,7 @@ bryan@LAPTOP-9LGJ3JGS:/c/MY-WEB-DEV/BLOG____2.0/BLOG_2.0/src$
 
 ---
 
-# Source Code
+## Source Code
 
 <details>
 <summary>  Folder Structure (src)  </summary>
@@ -2978,7 +3374,7 @@ bryan@LAPTOP-9LGJ3JGS:/c/MY-WEB-DEV/BLOG____2.0/BLOG_2.0/src$
 <details>
 <summary>  Click To See Component Sourcecode  </summary>
 
-# Component Structure
+## Component Structure
 
 ```
 .
@@ -3954,7 +4350,7 @@ export default {
 <details>
 <summary>  Click To See Template Sourcecode  </summary>
 
-# Templates
+## Templates
 
 ```
 

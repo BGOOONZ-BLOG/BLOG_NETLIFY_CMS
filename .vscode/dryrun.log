@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/workspace/BLOG_NETLIFY_CMS'
+git add .
+git commit -m " update"
+git push -u origin master
+make: Leaving directory '/workspace/BLOG_NETLIFY_CMS'
+ 

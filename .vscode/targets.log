@@ -1,0 +1,349 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sun Apr 10 14:48:06 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+RUBY_VERSION = ruby-2.7.5
+# automatic
+?F = $(notdir $?)
+# environment
+GP_OPEN_EDITOR = /ide/bin/remote-cli/gitpod-code
+# default
+.SHELLFLAGS := -c
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+VSX_REGISTRY_URL = https://open-vsx.gitpod.io
+# environment
+GRADLE_HOME = /home/gitpod/.sdkman/candidates/gradle/current
+# environment
+rvm_path = /home/gitpod/.rvm
+# environment
+SUPERVISOR_ADDR = localhost:22999
+# environment
+SUPERVISOR_ENVVAR_OTS = https://gitpod.io/api/ots/get/ebb996ce-4fdb-4dfa-8e33-ec5ba9daf2af
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /workspace/BLOG_NETLIFY_CMS
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-US","availableLanguages":{}}
+# environment
+_ = /ide/node
+# environment
+GITPOD_THEIA_PORT = 23000
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+GITPOD_ANALYTICS_WRITER = segment
+# environment
+GO_VERSION = 1.17.5
+# environment
+MAVEN_HOME = /home/gitpod/.sdkman/candidates/maven/current
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST :=  makefile
+# environment
+GITPOD_WORKSPACE_CONTEXT_URL = https://github.com/bgoonz/BLOG_NETLIFY_CMS
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+THEIA_WORKSPACE_ROOT = /workspace/BLOG_NETLIFY_CMS
+# environment
+INFOPATH = :/home/linuxbrew/.linuxbrew/share/info
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+GIT_EDITOR = /ide/bin/remote-cli/gitpod-code --wait
+# environment
+VSCODE_CWD = /ide
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /ide/bin/remote-cli:/home/gitpod/.nix-profile/bin:/workspace/.cargo/bin:/home/gitpod/.pyenv/plugins/pyenv-virtualenv/shims:/home/gitpod/.nix-profile/bin:/home/gitpod/.nix-profile/bin:/home/gitpod/.sdkman/candidates/maven/current/bin:/home/gitpod/.sdkman/candidates/java/current/bin:/home/gitpod/.sdkman/candidates/gradle/current/bin:/workspace/.cargo/bin:/home/gitpod/.rvm/gems/ruby-2.7.5/bin:/home/gitpod/.rvm/gems/ruby-2.7.5@global/bin:/home/gitpod/.rvm/rubies/ruby-2.7.5/bin:/home/gitpod/.pyenv/plugins/pyenv-virtualenv/shims:/home/gitpod/.nix-profile/bin:/ide/bin/remote-cli:/workspace/go/bin:/home/gitpod/go/bin:/home/gitpod/go-packages/bin:/home/gitpod/.nvm/versions/node/v16.13.2/bin:/workspace/.pip-modules/bin:/home/gitpod/.pyenv/bin:/home/gitpod/.pyenv/shims:/workspace/.rvm/bin:/home/gitpod/.cargo/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/gitpod/.nvm/versions/node/v16.13.2/bin:/home/gitpod/.rvm/bin:/home/gitpod/.nvm/versions/node/v16.13.2/bin:/home/gitpod/.nvm/versions/node/v16.13.2/bin
+# environment
+GITPOD_WORKSPACE_ID = bgoonz-blognetlifycms-cgvr3kyeoqw
+# environment
+GITPOD_INTERVAL = 30000
+# environment
+CARGO_HOME = /workspace/.cargo
+# environment
+rvm_stored_umask = 0022
+# environment
+GITPOD_WORKSPACE_CLUSTER_HOST = ws-us39.gitpod.io
+# environment
+GITPOD_ANALYTICS_SEGMENT_KEY = bUY8IRdJ42KjLOBS9LoIHMYFBD8rSzjU
+# environment
+SDKMAN_DIR = /home/gitpod/.sdkman
+# environment
+SDKMAN_CANDIDATES_API = https://api.sdkman.io/2
+# environment
+GOPATH = /workspace/go
+# environment
+SDKMAN_PLATFORM = linuxx64
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-4f8763e0-a038-4920-a15b-0ec11162128d.sock
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+NIX_VERSION = 2.6.0
+# environment
+LS_COLORS = 
+# automatic
+%F = $(notdir $%)
+# environment
+GP_PREVIEW_BROWSER = /ide/bin/remote-cli/gitpod-code --preview
+# environment
+VISUAL = /ide/bin/remote-cli/gitpod-code
+# environment
+NIX_SSL_CERT_FILE = /etc/ssl/certs/ca-certificates.crt
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+rvm_bin_path = /home/gitpod/.rvm/bin
+# environment
+WORKSPACEKIT_WRAP_NETNS = true
+# default
+.LOADED := 
+# environment
+GEM_HOME = /home/gitpod/.rvm/gems/ruby-2.7.5
+# environment
+MANPATH = /home/gitpod/.nix-profile/share/man:/home/gitpod/.nix-profile/share/man:/home/gitpod/.nix-profile/share/man:/home/gitpod/.nix-profile/share/man::/home/linuxbrew/.linuxbrew/share/man
+# environment
+NODE_VERSION = 16.13.2
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+PYENV_SHELL = bash
+# environment
+HOME = /home/gitpod
+# environment
+THEIA_WEBVIEW_EXTERNAL_ENDPOINT = webview-{{hostname}}
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+GITPOD_CLI_APITOKEN = UHi3jl3kLyiw-i59wmDZCwE.aOBatHvz
+# automatic
++F = $(notdir $+)
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+HOSTNAME = bgoonz-blognetlifycms-cgvr3kyeoqw
+# environment
+GRADLE_USER_HOME = /workspace/.gradle/
+# environment
+MAKELEVEL := 0
+# environment
+GEM_PATH = /home/gitpod/.rvm/gems/ruby-2.7.5:/home/gitpod/.rvm/gems/ruby-2.7.5@global
+# environment
+SDKMAN_VERSION = 5.14.1
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+IRBRC = /home/gitpod/.rvm/rubies/ruby-2.7.5/.irbrc
+# environment
+SHLVL = 0
+# environment
+NIX_PROFILES = /nix/var/nix/profiles/default /home/gitpod/.nix-profile
+# environment
+GITPOD_GIT_USER_NAME = Bryan C Guner
+# environment
+JAVA_HOME = /home/gitpod/.sdkman/candidates/java/current
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = gitpod
+# makefile
+.DEFAULT_GOAL := git
+# environment
+GOROOT = /home/gitpod/go
+# environment
+GITPOD_IDE_ALIAS = code-latest
+# environment
+rvm_version = 1.29.12 (latest)
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+GITPOD_REPO_ROOT = /workspace
+# environment
+PIP_USER = no
+# environment
+THEIA_RATELIMIT_LOG = 50
+# environment
+THEIA_MINI_BROWSER_HOST_PATTERN = browser-{{hostname}}
+# environment
+GITPOD_GIT_USER_EMAIL = bryan.guner@gmail.com
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+GITPOD_HOST = https://gitpod.io
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+NVM_DIR = /home/gitpod/.nvm
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+rvm_user_install_flag = 1
+# environment
+BROWSER = /ide/bin/helpers/browser.sh
+# environment
+GITPOD_MEMORY = 3435
+# environment
+GITPOD_TASKS = [{"init":"npm install && npm run build && make","command":"npm run start"}]
+# default
+MAKEFILES := 
+# environment
+GITPOD_CODE_HOST = https://gitpod.io
+# environment
+HOMEBREW_NO_AUTO_UPDATE = 1
+# automatic
+<F = $(notdir $<)
+# environment
+PIPENV_VENV_IN_PROJECT = true
+# environment
+TRIGGER_REBUILD = 1
+# environment
+GP_EXTERNAL_BROWSER = /ide/bin/remote-cli/gitpod-code --openExternal
+# environment
+SDKMAN_CANDIDATES_DIR = /home/gitpod/.sdkman/candidates
+# environment
+EDITOR = /ide/bin/remote-cli/gitpod-code
+# environment
+PWD = /workspace/BLOG_NETLIFY_CMS
+# environment
+LC_ALL = C
+# environment
+GITPOD_WORKSPACE_CONTEXT = {"isFile":false,"path":"","title":"bgoonz/BLOG_NETLIFY_CMS - master","ref":"master","refType":"branch","revision":"30c87cd1f3195101e8cde829d1cc0d940327b1fe","repository":{"cloneUrl":"https://github.com/bgoonz/BLOG_NETLIFY_CMS.git","host":"github.com","name":"BLOG_NETLIFY_CMS","owner":"bgoonz","private":false},"normalizedContextURL":"https://github.com/bgoonz/BLOG_NETLIFY_CMS","checkoutLocation":"BLOG_NETLIFY_CMS"}
+# environment
+JAVA_TOOL_OPTIONS =  -Xmx3435m
+# automatic
+^F = $(notdir $^)
+# environment
+rvm_prefix = /home/gitpod
+# default
+SUFFIXES := 
+# environment
+APACHE_DOCROOT_IN_REPO = public
+# environment
+PYENV_VIRTUALENV_INIT = 1
+# environment
+NGINX_DOCROOT_IN_REPO = public
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+rvm_loaded_flag = 1
+# environment
+GITPOD_INSTANCE_ID = 1e9dd8ac-cc68-43f6-a15b-6e5b7a568b19
+# environment
+GITPOD_WORKSPACE_URL = https://bgoonz-blognetlifycms-cgvr3kyeoqw.ws-us39.gitpod.io
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+PYTHONUSERBASE = /workspace/.pip-modules
+# environment
+VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+# environment
+MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.5
+# variable set hash-table stats:
+# Load=135/1024=13%, Rehash=0, Collisions=13/160=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2346, inode 201330937): 58 files, no impossibilities.
+
+# 58 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+git:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 2):
+	git add .
+	git commit -m "$m update"
+	git push -u origin master
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-10 12:33:00
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=5/1024=0%, Rehash=0, Collisions=0/15=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 64 / storage = 765 B / avg = 11 B
+# current buf: size = 8162 B / used = 765 B / count = 64 / avg = 11 B
+
+# strcache performance: lookups = 69 / hit rate = 7%
+# hash-table stats:
+# Load=64/8192=1%, Rehash=0, Collisions=2/69=3%
+# Finished Make data base on Sun Apr 10 14:48:06 2022
+
+ 
